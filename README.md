@@ -12,7 +12,9 @@ The site never reads from the private Brain at request time. A post reaches prod
 2. its SHA-256 matches the frozen source digest;
 3. the public-content validator rejects private paths, internal wikilinks, credential-shaped values, and private keys;
 4. standing operator authorization covers canonical synthesized whitepapers, while semantic source/review/privacy gates still fail closed;
-5. tests, typecheck, lint, static build, push, and anonymous public readback pass.
+5. the build derives one accessible **neural knowledge-lineage SVG** from the paper’s frozen public source manifest or numbered references, renders sources as neuron nodes, preserves deterministic source-to-source lineage cues, and includes the asset in the build hash manifest;
+6. publication fails closed if the graph is missing, unparseable, private-data-bearing, unmanifested, visually broken, or unavailable as anonymous `image/svg+xml`;
+7. tests, typecheck, lint, static build, push, and anonymous public readback pass.
 
 Dreamer is a discovery and synthesis layer—not unilateral publication authority. A six-hour wake gate detects newly canonical `published` whitepapers; the agent-backed publisher processes at most one candidate per run, runs the full source/privacy/review gate, publishes and verifies only a passing exact/public-redacted snapshot, and records blocked candidates without bypassing the gate. An independent script-only corpus guard continues to alert on missing papers or hash drift.
 

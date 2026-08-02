@@ -20,6 +20,8 @@ describe("whitepaper knowledge graphs", () => {
     for (const post of posts) {
       expect(post.knowledgeGraph.sourceCount).toBe(EXPECTED_SOURCE_COUNTS[post.slug]);
       expect(post.knowledgeGraph.families.length).toBeGreaterThan(1);
+      expect(post.knowledgeGraph.edges.length).toBeGreaterThan(0);
+      expect(post.knowledgeGraph.edges.every((edge) => post.knowledgeGraph.sources.some((source) => source.id === edge.sourceId) && post.knowledgeGraph.sources.some((source) => source.id === edge.targetId))).toBe(true);
       expect(post.knowledgeGraph.sources.every((source) => source.familyId.length > 0)).toBe(true);
       expect(post.knowledgeGraph.sources.some((source) => /testg1activationpacket/i.test(source.label))).toBe(false);
       expect(JSON.stringify(post.knowledgeGraph)).not.toMatch(/\/(?:Users|home)\//);
@@ -35,8 +37,11 @@ describe("whitepaper knowledge graphs", () => {
 
     expect(svg).toMatch(/^<svg/);
     expect(svg).toContain("15 SOURCE RECORDS");
+    expect(svg).toContain("NEURAL KNOWLEDGE LINEAGE");
+    expect(svg).toContain("source-neuron");
+    expect(svg).toContain("inter-source");
     expect(svg).toContain("Harnesses as compositional generalizers");
-    expect(svg).toContain("SYNTHESIZED PAPER");
+    expect(svg).toContain("SYNTHESIZED WHITEPAPER");
     expect(svg).toContain("aria-labelledby=");
     expect(svg).not.toMatch(/\/(?:Users|home)\//);
   });
@@ -49,7 +54,7 @@ describe("whitepaper knowledge graphs", () => {
 
     const image = screen.getByRole("img", { name: /knowledge lineage for self-improving ai needs laws it cannot rewrite/i });
     expect(image).toHaveAttribute("src", "/knowledge-graphs/self-improving-ai-needs-laws.svg");
-    expect(screen.getByText(/edges show source record to evidence family to synthesized paper/i)).toBeInTheDocument();
+    expect(screen.getByText(/sources are rendered as neuron nodes/i)).toBeInTheDocument();
     expect(screen.getByText("20 source records")).toBeInTheDocument();
   });
 });

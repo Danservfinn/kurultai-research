@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stay silent when every canonical published Brain whitepaper is on the blog."""
+"""Stay silent only when the canonical whitepaper corpus and neural graph assets align."""
 from __future__ import annotations
 
 import hashlib
@@ -22,13 +22,14 @@ def main() -> int:
     posts: dict[str, dict] = {}
     for post in manifest["posts"]:
         posts[post["slug"]] = post
-        canonical = post.get("canonicalSlug")
-        if canonical:
-            posts[canonical] = post
+        canonical_slug = post.get("canonicalSlug")
+        if canonical_slug:
+            posts[canonical_slug] = post
         for alias in post.get("aliases", []):
             posts[alias] = post
+
     canonical: list[tuple[str, str, str]] = []
-    for date, title, slug, status in re.findall(
+    for _date, title, slug, status in re.findall(
         r"^\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*(.*?)\s*\|\s*`([^`]+)`\s*\|\s*(.*?)\s*\|$",
         index,
         re.MULTILINE,
@@ -65,10 +66,46 @@ def main() -> int:
     if stale:
         problems.append("blog tracks whitepapers no longer canonical: " + ", ".join(stale))
 
+    build_manifest_path = BLOG / "dist/build-manifest.json"
+    build_manifest = {}
+    if not build_manifest_path.exists():
+        problems.append("static build manifest missing; neural graph assets are not release-verifiable")
+    else:
+        try:
+            build_manifest = json.loads(build_manifest_path.read_text()).get("files", {})
+        except (OSError, ValueError):
+            problems.append("static build manifest is malformed")
+
+    for post in manifest["posts"]:
+        if not post.get("public") or post.get("status") != "published":
+            continue
+        relative = f"knowledge-graphs/{post['slug']}.svg"
+        graph_path = BLOG / "dist" / relative
+        if not graph_path.exists():
+            problems.append(f"neural knowledge graph missing: {post['slug']}")
+            continue
+        graph = graph_path.read_text()
+        required_markers = (
+            'data-graph-version="2"',
+            'class="brain-outline"',
+            'class="source-neuron"',
+            'class="inter-source ',
+            "NEURAL KNOWLEDGE LINEAGE",
+        )
+        missing = [marker for marker in required_markers if marker not in graph]
+        if missing:
+            problems.append(f"neural knowledge graph incomplete: {post['slug']} ({len(missing)} required markers missing)")
+        if re.search(r"/(?:Users|home)/", graph) or "[[" in graph:
+            problems.append(f"neural knowledge graph crosses public-data boundary: {post['slug']}")
+        expected_digest = build_manifest.get(relative)
+        if not expected_digest:
+            problems.append(f"neural knowledge graph absent from build manifest: {post['slug']}")
+        elif sha256(graph_path) != expected_digest:
+            problems.append(f"neural knowledge graph build hash drift: {post['slug']}")
+
     if problems:
         print("Kurultai Research whitepaper publication gate needs attention:\n- " + "\n- ".join(problems))
-        print("No automatic publication occurred; run the source/privacy/review gate before updating the public manifest.")
-        return 0
+        print("No automatic publication occurred; every paper requires a verified neural knowledge graph plus the source/privacy/review gate.")
     return 0
 
 

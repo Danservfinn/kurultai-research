@@ -15,12 +15,12 @@ export function KnowledgeGraphFigure({ post }: { post: PublicPost }) {
           src={`/knowledge-graphs/${post.slug}.svg`}
           width="1600"
           height="1000"
-          alt={`Knowledge lineage for ${post.title}: ${post.knowledgeGraph.sourceCount} source records grouped into evidence families and connected to the synthesized paper`}
+          alt={`Neural knowledge lineage for ${post.title}: ${post.knowledgeGraph.sourceCount} source records shown as neurons with ${post.knowledgeGraph.edges.length} deterministic inter-source links, grouped into evidence neighborhoods and connected to the synthesized paper`}
         />
       </div>
       <figcaption>
         <span>Graph reading</span>
-        <p>Edges show source record to evidence family to synthesized paper. Grouping is derived from the frozen public source manifest; it shows lineage, not causal proof or equal evidentiary weight.</p>
+        <p>Sources are rendered as neuron nodes. Violet links mark a shared evidence neighborhood; amber links mark cross-domain overlap in frozen public labels or role metadata; cyan paths feed synthesis neighborhoods. These are deterministic lineage cues—not causal proof, consensus, or equal evidentiary weight.</p>
       </figcaption>
     </figure>
   );
