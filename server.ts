@@ -1,11 +1,13 @@
 import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
-import { resolveRequestPath } from "./lib/server-utils";
+import { getRedirectTarget, resolveRequestPath } from "./lib/server-utils";
 
 const ROOT = path.resolve(process.env.DIST_ROOT || path.join(process.cwd(), "dist"));
 const HOST = process.env.HOST || "127.0.0.1";
 const PORT = Number(process.env.PORT || 18804);
+let REDIRECTS: Record<string, string> = {};
+try { REDIRECTS = JSON.parse(fs.readFileSync(path.join(ROOT, "redirects.json"), "utf8")) as Record<string, string>; } catch { REDIRECTS = {}; }
 const MIME: Record<string, string> = {
   ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8", ".xml": "application/xml; charset=utf-8", ".txt": "text/plain; charset=utf-8",
@@ -27,6 +29,11 @@ const server = http.createServer((req, res) => {
   if (req.url.split("?", 1)[0] === "/health") {
     res.writeHead(200, { "content-type": MIME[".json"], "cache-control": "no-store" });
     return res.end(req.method === "HEAD" ? undefined : JSON.stringify({ status: "ok", service: "kurultai-research", visibility: "public", contentMode: "frozen-reviewed-snapshots" }));
+  }
+  const redirect = getRedirectTarget(req.url, REDIRECTS);
+  if (redirect) {
+    res.writeHead(308, { location: redirect, "cache-control": "public, max-age=86400" });
+    return res.end();
   }
   let target = resolveRequestPath(req.url, ROOT);
   if (!target || !fs.existsSync(target) || !fs.statSync(target).isFile()) {

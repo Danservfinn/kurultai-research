@@ -24,8 +24,10 @@ export type PublicPost = {
   provenance: Provenance;
   sourceSha256?: string;
   sourceArtifactSha256?: string;
-  publicEdition?: "public-redacted-v1";
+  publicEdition?: "public-redacted-v1" | "public-redacted-v2-brand-normalized";
   publicationNote?: string;
+  canonicalSlug?: string;
+  aliases?: string[];
 };
 
 type ManifestPost = Omit<PublicPost, "content"> & {

@@ -19,7 +19,14 @@ def sha256(path: Path) -> str:
 def main() -> int:
     index = (BRAIN / "index.md").read_text()
     manifest = json.loads((BLOG / "content/publication-manifest.json").read_text())
-    posts = {post["slug"]: post for post in manifest["posts"]}
+    posts: dict[str, dict] = {}
+    for post in manifest["posts"]:
+        posts[post["slug"]] = post
+        canonical = post.get("canonicalSlug")
+        if canonical:
+            posts[canonical] = post
+        for alias in post.get("aliases", []):
+            posts[alias] = post
     canonical: list[tuple[str, str, str]] = []
     for date, title, slug, status in re.findall(
         r"^\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*(.*?)\s*\|\s*`([^`]+)`\s*\|\s*(.*?)\s*\|$",
@@ -49,7 +56,11 @@ def main() -> int:
             problems.append(f"public snapshot hash drift: {slug}")
 
     expected = {slug for slug, _, _ in canonical}
-    tracked = {slug for slug, post in posts.items() if post.get("sourceArtifactSha256")}
+    tracked = {
+        post.get("canonicalSlug") or post["slug"]
+        for post in manifest["posts"]
+        if post.get("sourceArtifactSha256")
+    }
     stale = sorted(tracked - expected)
     if stale:
         problems.append("blog tracks whitepapers no longer canonical: " + ", ".join(stale))

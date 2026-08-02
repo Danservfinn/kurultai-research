@@ -4,14 +4,29 @@
   "generatedAt": "2026-08-02",
   "items": [
     {
+      "sourceFile": "verification-solvency-agent-commit-rates.md",
+      "publicFile": "verification-solvency-agent-commit-rates.md",
+      "sourceArtifactSha256": "2ab8dfb6a747fa1d843854d763c373542bb6404e824529ba15b2b5185e613259",
+      "sourceSha256": "2ab8dfb6a747fa1d843854d763c373542bb6404e824529ba15b2b5185e613259",
+      "bytes": 20335,
+      "words": 2672,
+      "readingMinutes": 13,
+      "transform": "exact-public-snapshot-v1",
+      "privatePathsRemaining": 0,
+      "sessionIdsRemaining": 0,
+      "wikilinksRemaining": 0
+    },
+    {
       "sourceFile": "hulagu-v2-compiling-autonomy-through-evidence-bound-gates.md",
-      "publicFile": "hulagu-v2-compiling-evidence-bound-admission.md",
+      "canonicalSlug": "hulagu-v2-compiling-autonomy-through-evidence-bound-gates",
+      "publicSlug": "hulegu-v2-compiling-autonomy-through-evidence-bound-gates",
+      "publicFile": "hulegu-v2-compiling-evidence-bound-admission.md",
       "sourceArtifactSha256": "9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5",
-      "sourceSha256": "1f11158f38b6c404df7bf54f6b42a739af403e56e4f0548158fd13caf98947d7",
-      "bytes": 46822,
+      "sourceSha256": "e886151ed2f0af88ef5e4b126e67a0a73a435ba191a38cb5471fea6067e0c190",
+      "bytes": 46839,
       "words": 5736,
       "readingMinutes": 27,
-      "transform": "public-redacted-v1",
+      "transform": "public-redacted-v2-brand-normalized",
       "privatePathsRemaining": 0,
       "sessionIdsRemaining": 0,
       "wikilinksRemaining": 0

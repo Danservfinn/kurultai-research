@@ -1,5 +1,14 @@
 import path from "node:path";
 
+export function getRedirectTarget(urlPath: string, redirects: Record<string, string>): string | null {
+  let decoded: string;
+  try { decoded = decodeURIComponent(urlPath.split("?", 1)[0]); } catch { return null; }
+  if (decoded.includes("\0") || decoded.split("/").includes("..")) return null;
+  const clean = decoded.replace(/^\/+|\/+$/g, "");
+  const normalized = clean ? `/${clean}/` : "/";
+  return redirects[normalized] ?? null;
+}
+
 export function resolveRequestPath(urlPath: string, distRoot: string): string | null {
   let decoded: string;
   try { decoded = decodeURIComponent(urlPath.split("?", 1)[0]); } catch { return null; }

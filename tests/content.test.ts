@@ -5,7 +5,8 @@ describe("public content boundary", () => {
   it("exports the complete canonical whitepaper corpus in reverse chronology", () => {
     const posts = getAllPosts();
     expect(posts.map((post) => post.slug)).toEqual([
-      "hulagu-v2-compiling-autonomy-through-evidence-bound-gates",
+      "verification-solvency-agent-commit-rates",
+      "hulegu-v2-compiling-autonomy-through-evidence-bound-gates",
       "hermes-behind-the-service-boundary",
       "typed-evidence-authority-separated-agent-architecture",
       "self-improving-ai-needs-laws",
@@ -15,8 +16,9 @@ describe("public content boundary", () => {
   });
 
   it("binds each public-redacted edition to both public and canonical source digests", () => {
-    const redacted = getAllPosts().filter((post) => post.publicEdition === "public-redacted-v1");
+    const redacted = getAllPosts().filter((post) => post.publicEdition?.startsWith("public-redacted-"));
     expect(redacted).toHaveLength(3);
+    expect(redacted.some((post) => post.title.startsWith("Hulegu v2") && post.aliases?.includes("hulagu-v2-compiling-autonomy-through-evidence-bound-gates"))).toBe(true);
     expect(redacted.every((post) => /^[a-f0-9]{64}$/.test(post.sourceSha256 ?? ""))).toBe(true);
     expect(redacted.every((post) => /^[a-f0-9]{64}$/.test(post.sourceArtifactSha256 ?? ""))).toBe(true);
     expect(redacted.every((post) => post.publicationNote?.includes("Public redacted edition"))).toBe(true);

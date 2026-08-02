@@ -13,7 +13,7 @@ describe("published research page", () => {
   });
 
   it("renders public-redacted editions without duplicating the source heading", () => {
-    const post = getPostBySlug("hulagu-v2-compiling-autonomy-through-evidence-bound-gates");
+    const post = getPostBySlug("hulegu-v2-compiling-autonomy-through-evidence-bound-gates");
     expect(post).toBeDefined();
     render(<ResearchPage post={post!} />);
     expect(screen.getAllByRole("heading", { name: post!.title })).toHaveLength(1);

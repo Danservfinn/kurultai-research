@@ -9,17 +9,17 @@ snapshot_cutoff: 2026-07-27T16:05:00Z
 review_rounds: 4
 tags: [whitepaper, hulagu, hermes, bounded-autonomy, gate-compilation, evidence, authority-separation, kurultai]
 ---
-<!-- public-redacted-v1; canonical-source-sha256: 9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5 -->
+<!-- public-redacted-v2-brand-normalized; canonical-source-sha256: 9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5 -->
 
-# Hulagu v2: Compiling Evidence-Bound Admission Decisions
+# Hulegu v2: Compiling Evidence-Bound Admission Decisions
 
 ## Abstract
 
-Hulagu is a dedicated Telegram job-search product [S15]. Most agent systems treat autonomy as a permission: give a model tools, a goal, and a loop, then constrain the resulting behavior with prompts and approvals. Hulagu v2 instead begins with a deterministic admission decision over exact evidence. **At G0, Hulagu compiles an authority record for a cooperative local workflow; it does not yet compile or enforce an unforgeable capability.** Authenticated principals, durable nonce consumption, exclusive effect mediation, protected writers, and same-UID bypass resistance remain future proof obligations.
+Hulegu is a dedicated Telegram job-search product [S15]. Most agent systems treat autonomy as a permission: give a model tools, a goal, and a loop, then constrain the resulting behavior with prompts and approvals. Hulegu v2 instead begins with a deterministic admission decision over exact evidence. **At G0, Hulegu compiles an authority record for a cooperative local workflow; it does not yet compile or enforce an unforgeable capability.** Authenticated principals, durable nonce consumption, exclusive effect mediation, protected writers, and same-UID bypass resistance remain future proof obligations.
 
 The planned architecture combines one persistent public-source control plane, ephemeral tenant-sensitive capsules, deterministic effect brokers, typed artifacts, closed write sets, role-separated internal review, and forward-only gate transitions. The implemented local mechanism is smaller: bind a candidate to an exact base, restrict its declared write set, require a distinct review role, and compile an `ADMIT` or `DENY`. G0 additionally has an accepted local transition and readback, but the same OS principal can still bypass the JSON decision. Implementation completion is defined at G9; G10 and G11 are separate pilot-observation gates.
 
-This paper separates design, decision compilation, enforcement, and runtime evidence. At the revision snapshot, G0 is machine-closed under its local no-network protocol. G1 remains `DECLARED_INACTIVE`. Its three-file source-contract candidate agrees with a deterministic verifier in the historical G1 source worktree, and six focused tests pass, but that verifier does not bind the separate authoritative G0 `CLOSED` registry. R28 reached `ADMIT`; R29 approved one no-write consumer; R30 executed that consumer and emitted one sanitized local receipt. R30 is frozen without a distinct semantic review, no R31 exists, and the G1 authority-packet lane is paused while a separate offline product slice is evaluated [S12, S25, S26]. G2–G9 implementation and G10/G11 pilots have not been reached. No Hulagu v2 runtime, tenant capsule, customer-data path, deployment, or pilot is claimed live. The evidence supports local feasibility and evidence-contract denial behavior in one cooperative file-backed workflow. It does not establish an enforced capability boundary, full-system implementability, runtime safety, operational reliability, customer benefit, lower incident rates, or economically useful autonomy.
+This paper separates design, decision compilation, enforcement, and runtime evidence. At the revision snapshot, G0 is machine-closed under its local no-network protocol. G1 remains `DECLARED_INACTIVE`. Its three-file source-contract candidate agrees with a deterministic verifier in the historical G1 source worktree, and six focused tests pass, but that verifier does not bind the separate authoritative G0 `CLOSED` registry. R28 reached `ADMIT`; R29 approved one no-write consumer; R30 executed that consumer and emitted one sanitized local receipt. R30 is frozen without a distinct semantic review, no R31 exists, and the G1 authority-packet lane is paused while a separate offline product slice is evaluated [S12, S25, S26]. G2–G9 implementation and G10/G11 pilots have not been reached. No Hulegu v2 runtime, tenant capsule, customer-data path, deployment, or pilot is claimed live. The evidence supports local feasibility and evidence-contract denial behavior in one cooperative file-backed workflow. It does not establish an enforced capability boundary, full-system implementability, runtime safety, operational reliability, customer benefit, lower incident rates, or economically useful autonomy.
 
 ## The problem: prose permission is not authority
 
@@ -37,7 +37,7 @@ Three claims are hidden inside one sentence:
 2. passing tests are sufficient authority for deployment;
 3. the speaker may make the deployment decision.
 
-All three can be false while the sentence remains fluent. Hulagu therefore represents authority outside model prose. A valid transition must bind exact bytes, exact identities, exact predicates, an expiry window, an anti-replay value, and an explicit effect surface. Unknown fields and missing evidence default to `DENY` [S3, S4, S8].
+All three can be false while the sentence remains fluent. Hulegu therefore represents authority outside model prose. A valid transition must bind exact bytes, exact identities, exact predicates, an expiry window, an anti-replay value, and an explicit effect surface. Unknown fields and missing evidence default to `DENY` [S3, S4, S8].
 
 A useful mental model is a compiler. Source code does not become an executable because its author declares it valid; it passes through parsing, type checking, linking, and artifact production. Likewise, a proposal does not become authority because an agent declares it approved. It must compile through an evidence contract.
 
@@ -61,7 +61,7 @@ The planned system is intentionally less permissive than a general-purpose agent
 
 ### 3.1 Source manifest
 
-Hashes below identify the exact source bytes used for this paper. S16 preserves the earlier R28/R29 evidence family and verifier/test receipt. S24 preserves retrieved primary-source bytes for the related-work comparison. S25 preserves the mutable S12/S13 revision-cutoff bytes and the R30 receipt. These bundles are locally writable rather than storage-immutable; their manifests make drift detectable. A revision finalization receipt binds the final paper and all four critiques. None of these files grants Hulagu authority.
+Hashes below identify the exact source bytes used for this paper. S16 preserves the earlier R28/R29 evidence family and verifier/test receipt. S24 preserves retrieved primary-source bytes for the related-work comparison. S25 preserves the mutable S12/S13 revision-cutoff bytes and the R30 receipt. These bundles are locally writable rather than storage-immutable; their manifests make drift detectable. A revision finalization receipt binds the final paper and all four critiques. None of these files grants Hulegu authority.
 
 | ID | Source | Role | Grade | SHA-256 |
 |---|---|---|---|---|
@@ -98,7 +98,7 @@ The rubric is explicit: **A-primary** means exact bytes from an authoritative ex
 
 ### 3.2 Circularity and source limitations
 
-The implementation corpus is almost entirely Kurultai-internal. The plan, policy, tests, reviews, and ledger describe one system built by closely related agents under one operator. Current reviews are **role-separated internal reviews**, not independent security principals. They may differ by model/provider, context, process, or prompt, but they share the same operator, filesystem principal, and write domain; identity fields are not authenticated. The external primary sources in S18–S22 establish prior art, not Hulagu's effectiveness.
+The implementation corpus is almost entirely Kurultai-internal. The plan, policy, tests, reviews, and ledger describe one system built by closely related agents under one operator. Current reviews are **role-separated internal reviews**, not independent security principals. They may differ by model/provider, context, process, or prompt, but they share the same operator, filesystem principal, and write domain; identity fields are not authenticated. The external primary sources in S18–S22 establish prior art, not Hulegu's effectiveness.
 
 This paper therefore claims:
 
@@ -109,7 +109,7 @@ This paper therefore claims:
 
 It does **not** claim:
 
-- that Hulagu v2 is fully implemented, installed, running, or autonomous;
+- that Hulegu v2 is fully implemented, installed, running, or autonomous;
 - that the architecture improves job-search outcomes, trust, retention, cost, or reliability;
 - that machine policy eliminates the need for human accountability;
 - that an approved artifact is safe outside its exact scope or after expiry.
@@ -148,7 +148,7 @@ This code proves almost nothing by itself, but it exposes the decision mechanism
 
 The planned durable version adds schemas, exact hashes, a protected source reference, authenticated principals, durable replay state, test receipts, a closure envelope, an exclusive mediator, and post-action readback [S4–S10, S23]. In the current cooperative workflow, no model sentence changes the compiler's `DENY`; the same local OS principal can still bypass the compiler and write directly.
 
-## Scaling the toy into Hulagu v2
+## Scaling the toy into Hulegu v2
 
 ### 5.1 Three planes, three kinds of trust
 
@@ -170,7 +170,7 @@ A single conversational process should not answer all three.
 
 ### 5.2 Gates as a forward-only build graph
 
-Hulagu's registry declares a dependency graph from G0 to G11 [S5]. G0–G9 are implementation gates; G10/G11 are pilot-observation gates [S1, S4, S12]. The phases are:
+Hulegu's registry declares a dependency graph from G0 to G11 [S5]. G0–G9 are implementation gates; G10/G11 are pilot-observation gates [S1, S4, S12]. The phases are:
 
 | Gate | Intended closure | Snapshot state |
 |---|---|---|
@@ -220,7 +220,7 @@ The same human may own the system, but no single model role should possess all t
 
 ### 5.4 Closed write sets and acyclic evidence
 
-A permission such as "implement G1" is too broad to verify. Hulagu instead names exact payload paths and exact activation mutation candidates [S6, S8]. The G1 candidate itself is limited to three files; it explicitly does not authorize writing the downstream G1 payload, activating G1, reaching runtime/customer effects, or mutating the registry.
+A permission such as "implement G1" is too broad to verify. Hulegu instead names exact payload paths and exact activation mutation candidates [S6, S8]. The G1 candidate itself is limited to three files; it explicitly does not authorize writing the downstream G1 payload, activating G1, reaching runtime/customer effects, or mutating the registry.
 
 The implementation history exposed a subtler requirement: authority artifacts must form an **acyclic hash graph**. A file cannot contain its own final whole-file hash without creating a self-reference. Earlier G1 attempts also showed that a summary written after an inventory can invalidate hashes the inventory claimed were final [S12]. The corrected rule is simple:
 
@@ -228,7 +228,7 @@ The implementation history exposed a subtler requirement: authority artifacts mu
 core receipt -> request -> decision -> readback -> inventory -> final inventory
 ```
 
-Each node may hash predecessors, never itself or a future sibling. Membership must be explicit. This is a reusable mechanism for any file-backed autonomous loop, not just Hulagu.
+Each node may hash predecessors, never itself or a future sibling. Membership must be explicit. This is a reusable mechanism for any file-backed autonomous loop, not just Hulegu.
 
 ### 5.5 Effects are at-least-once, so receipts need ambiguity
 
@@ -308,7 +308,7 @@ These practices extend existing Kurultai surfaces. They do not require a new orc
 | Preserve explicit state vocabulary (`specified`, `implemented`, `installed`, `running`, `autonomous`, `validated`) | **direct-now** | Brain implementation ledger and control-room status | Documentation only; prevents false completion claims |
 | Model evidence packets as acyclic artifact DAGs | **direct-now** | Existing Brain receipt/review artifacts | Documentation only; retires self-hash and post-freeze drift defects |
 | Resume R30 semantic review or the G1 authority-packet lane | **gated-later** | Existing G1 producer/reviewer lane | R30 is frozen and unreviewed; requires an operator decision, distinct reviewer, unchanged base, and explicit proof-cost budget |
-| Implement G1 payload or mutate registry/write set | **gated-later** | Existing Hulagu source repository and gate registry | Requires fresh admission plus a distinct role-separated review; enforcement debt remains |
+| Implement G1 payload or mutate registry/write set | **gated-later** | Existing Hulegu source repository and gate registry | Requires fresh admission plus a distinct role-separated review; enforcement debt remains |
 | Install runtime, enable autonomous cron, admit data, or run capsules | **gated-later** | G2–G9 gates | No current authority or closure evidence |
 | Claim lower incidents, better outcomes, lower cost, or customer trust | **needs-evidence** | Shadow/synthetic/pilot receipts at G8–G11 | Needs comparative operational data |
 | Create a second control plane or parallel proof system | **no-op** | Buildroom, Kanban, Brain, Yassa already provide the route | Would add duplicate state and new drift |
@@ -326,15 +326,15 @@ The paper does not itself authorize G1 adoption or implementation. The source of
 
 ## Related work and novelty boundary
 
-The primitives here are established rather than novel. OPA separates declarative policy management and decision logic from the software that ultimately enforces policy [S18]. in-toto records which supply-chain steps happened, by whom, and in what order; SLSA provenance binds artifacts to how and where they were produced [S19, S20]. TUF formalizes version, expiry, freshness, and rollback protections [S21]. Macaroons demonstrate cryptographic authorization credentials with contextual caveats [S22]. Content-addressed predecessor graphs are also ordinary provenance machinery, not a Hulagu invention.
+The primitives here are established rather than novel. OPA separates declarative policy management and decision logic from the software that ultimately enforces policy [S18]. in-toto records which supply-chain steps happened, by whom, and in what order; SLSA provenance binds artifacts to how and where they were produced [S19, S20]. TUF formalizes version, expiry, freshness, and rollback protections [S21]. Macaroons demonstrate cryptographic authorization credentials with contextual caveats [S22]. Content-addressed predecessor graphs are also ordinary provenance machinery, not a Hulegu invention.
 
-Kurultai's own Yassa design goes beyond the current G0/G1 workflow by requiring authenticated peer credentials, a privileged exclusive broker, a durable append-only replay/state authority, protected writers, and explicit same-UID bypass resistance [S23]. Hulagu should reuse those mechanisms rather than invent a parallel capability system.
+Kurultai's own Yassa design goes beyond the current G0/G1 workflow by requiring authenticated peer credentials, a privileged exclusive broker, a durable append-only replay/state authority, protected writers, and explicit same-UID bypass resistance [S23]. Hulegu should reuse those mechanisms rather than invent a parallel capability system.
 
-The defensible contribution is therefore narrower: **a Hulagu-specific engineering case study of deterministic admission records, exact-source receipts, and proof-contract liveness failures in a file-backed agent loop.** The paper does not claim a new authorization primitive. Its useful delta, if any, must be measured against Git/CI plus these established provenance and enforcement systems. Exact retrieved bytes, primary URLs, hashes, and claim scopes for this comparison are preserved in S24's non-authorizing bundle [S24].
+The defensible contribution is therefore narrower: **a Hulegu-specific engineering case study of deterministic admission records, exact-source receipts, and proof-contract liveness failures in a file-backed agent loop.** The paper does not claim a new authorization primitive. Its useful delta, if any, must be measured against Git/CI plus these established provenance and enforcement systems. Exact retrieved bytes, primary URLs, hashes, and claim scopes for this comparison are preserved in S24's non-authorizing bundle [S24].
 
 ## Strongest counterargument
 
-The strongest objection is that Hulagu currently compiles correlated, partly self-attested documents into a policy decision while the same principal retains direct write and network authority. Git, CI, branch protection, in-toto/SLSA provenance, TUF-style freshness, authenticated principals, least-privilege credentials, typed APIs, and an exclusive broker may provide the useful properties with less artifact choreography. IR-008 proves the bypass is not merely theoretical: a worker performed an unauthorized custom-ref push despite the no-push boundary. The G1 history adds the liveness cost—most denials concerned proof construction rather than tenant isolation or broker correctness.
+The strongest objection is that Hulegu currently compiles correlated, partly self-attested documents into a policy decision while the same principal retains direct write and network authority. Git, CI, branch protection, in-toto/SLSA provenance, TUF-style freshness, authenticated principals, least-privilege credentials, typed APIs, and an exclusive broker may provide the useful properties with less artifact choreography. IR-008 proves the bypass is not merely theoretical: a worker performed an unauthorized custom-ref push despite the no-push boundary. The G1 history adds the liveness cost—most denials concerned proof construction rather than tenant isolation or broker correctness.
 
 The architecture earns its complexity only if it demonstrates a measurable delta over a simpler baseline. It must catch consequential defects ordinary controls miss, resist direct same-principal bypass, keep median proof cost below an explicit budget, and progress through gates without weakening the checks. Otherwise the correct move is to collapse redundant artifacts into existing Git/CI/Buildroom/Yassa controls while preserving only the exact-hash, provenance, anti-replay, and effect-boundary primitives that prove useful.
 
@@ -409,12 +409,12 @@ All critical findings from all four review rounds were addressed before republic
 - Corrected implementation completion to G0–G9, represented G10/G11 as pilot-observation gates, and updated the snapshot through frozen R30 at `2026-07-27T16:05:00Z`.
 - Recast the core mechanism as a cooperative deterministic admission decision rather than an unforgeable capability; added authenticated-principal, durable-replay, exclusive-mediator, and same-UID bypass proof debt.
 - Marked the proof-contract liveness falsifier **triggered**, paused scale-out, added IR-008 as counterevidence, and inserted direct bypass experiments.
-- Added primary-source related work and positioned the contribution as a Hulagu case study rather than a novel authorization primitive.
+- Added primary-source related work and positioned the contribution as a Hulegu case study rather than a novel authorization primitive.
 - Bound the revised paper, four critiques, related-work archive, and revision state bundle in `brain/whitepapers/receipts/hulagu-v2-publication-finalization-r2.json`.
 
 ## Conclusion
 
-Hulagu v2's most reusable implemented idea is smaller than a capability system: **admission is an inspectable data record produced by deterministic policy.** Exact bases, declared write sets, typed predicates, role-separated review, expiry, replay fields, deterministic denial, and readback make an agent's proposal easier to inspect and reject. They do not stop a same-principal process from bypassing the decision. That requires authenticated principals, durable replay state, protected writers, and an exclusive effect mediator.
+Hulegu v2's most reusable implemented idea is smaller than a capability system: **admission is an inspectable data record produced by deterministic policy.** Exact bases, declared write sets, typed predicates, role-separated review, expiry, replay fields, deterministic denial, and readback make an agent's proposal easier to inspect and reject. They do not stop a same-principal process from bypassing the decision. That requires authenticated principals, durable replay state, protected writers, and an exclusive effect mediator.
 
 The current evidence is deliberately asymmetric. One local source-policy transition was accepted; G1's evidence protocol repeatedly rejected malformed contracts; R30 emitted one narrow no-write receipt; and IR-008 demonstrated an enforcement bypass. This is enough to make the admission workflow concrete, but the proof-contract liveness falsifier is triggered and no capability, runtime-safety, or customer-value claim follows. Do not scale the authority-packet loop. Keep it paused until the current-boundary bypass suite, a simpler-baseline comparison, and a predeclared proof-cost budget justify resumption. The separate offline product slice may continue to be evaluated on its own evidence, without laundering product progress into G1 authority.
 

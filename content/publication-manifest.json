@@ -2,12 +2,35 @@
   "schemaVersion": 2,
   "posts": [
     {
-      "slug": "hulagu-v2-compiling-autonomy-through-evidence-bound-gates",
-      "sourceFile": "hulagu-v2-compiling-evidence-bound-admission.md",
-      "sourceSha256": "1f11158f38b6c404df7bf54f6b42a739af403e56e4f0548158fd13caf98947d7",
+      "slug": "verification-solvency-agent-commit-rates",
+      "sourceFile": "verification-solvency-agent-commit-rates.md",
+      "sourceSha256": "2ab8dfb6a747fa1d843854d763c373542bb6404e824529ba15b2b5185e613259",
+      "sourceArtifactSha256": "2ab8dfb6a747fa1d843854d763c373542bb6404e824529ba15b2b5185e613259",
+      "title": "Verification Solvency: Why Agent Commit Rates Must Be Bounded by Independent Review Capacity",
+      "subtitle": "Typed evidence and separated authority still need capacity-aware backpressure",
+      "excerpt": "A three-stage admission architecture for measuring cross-layer quality, scaling evidence to blast radius, and preventing agent commits from outrunning independent verification.",
+      "date": "2026-08-02",
+      "topic": "Agent governance",
+      "readingMinutes": 13,
+      "public": true,
+      "status": "published",
+      "featured": true,
+      "publicationNote": "Published by explicit operator authorization on August 2, 2026 after a claim-level source check, privacy scan, and exact-hash build gate.",
+      "provenance": {
+        "synthesis": "Brain Dreamer generated the verification-bounded-commit design packet from four reviewed studies; the editorial pass corrected and expanded it into the final whitepaper",
+        "review": "Claim-level pre-publish source check passed; production efficacy remains explicitly unproven",
+        "provider": "Dreamer design packet generated through Z.AI Coding Plan with glm-5.2; final authorship is multi-stage editorial synthesis"
+      }
+    },
+    {
+      "slug": "hulegu-v2-compiling-autonomy-through-evidence-bound-gates",
+      "canonicalSlug": "hulagu-v2-compiling-autonomy-through-evidence-bound-gates",
+      "aliases": ["hulagu-v2-compiling-autonomy-through-evidence-bound-gates"],
+      "sourceFile": "hulegu-v2-compiling-evidence-bound-admission.md",
+      "sourceSha256": "e886151ed2f0af88ef5e4b126e67a0a73a435ba191a38cb5471fea6067e0c190",
       "sourceArtifactSha256": "9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5",
-      "publicEdition": "public-redacted-v1",
-      "title": "Hulagu v2: Compiling Evidence-Bound Admission Decisions",
+      "publicEdition": "public-redacted-v2-brand-normalized",
+      "title": "Hulegu v2: Compiling Evidence-Bound Admission Decisions",
       "subtitle": "Admission can be compiled; capability still requires enforcement",
       "excerpt": "A 26-source engineering case study of deterministic admission records, exact-source receipts, role-separated review, enforcement bypass, and the liveness cost of proof contracts.",
       "date": "2026-07-27",
@@ -16,9 +39,9 @@
       "public": true,
       "status": "published",
       "featured": true,
-      "publicationNote": "Public redacted edition published under standing operator authorization. Local absolute paths were converted to repository-relative evidence references; technical claims, evidence grades, falsifiers, and revision history are unchanged.",
+      "publicationNote": "Public redacted edition published under standing operator authorization and updated after the product was renamed Hulegu. The public body normalizes the product name and converts local absolute paths to repository-relative evidence references; technical claims, evidence grades, falsifiers, and revision history are unchanged.",
       "provenance": {
-        "synthesis": "Kurultai whitepaper synthesized from 26 exact source and evidence artifacts",
+        "synthesis": "Hulegu whitepaper synthesized from 26 exact source and evidence artifacts",
         "review": "Four adversarial publication-review rounds; all critical findings resolved in R2",
         "provider": "Multi-model editorial and adversarial synthesis; no single-model authorship claim"
       }
