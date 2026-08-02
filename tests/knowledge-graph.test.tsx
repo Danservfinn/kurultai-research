@@ -53,7 +53,7 @@ describe("whitepaper knowledge graphs", () => {
     render(<KnowledgeGraphFigure post={post!} />);
 
     const image = screen.getByRole("img", { name: /knowledge lineage for self-improving ai needs laws it cannot rewrite/i });
-    expect(image).toHaveAttribute("src", "/knowledge-graphs/self-improving-ai-needs-laws.svg");
+    expect(image).toHaveAttribute("src", "/knowledge-graphs/self-improving-ai-needs-laws.svg?v=2");
     expect(screen.getByText(/sources are rendered as neuron nodes/i)).toBeInTheDocument();
     expect(screen.getByText("20 source records")).toBeInTheDocument();
   });

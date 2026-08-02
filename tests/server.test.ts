@@ -24,6 +24,7 @@ describe("static server path resolution", () => {
     expect(getCacheControl("/srv/dist/api/v1/index.json")).toBe("public, max-age=60, must-revalidate");
     expect(getCacheControl("/srv/dist/research/example/index.md")).toBe("public, max-age=60, must-revalidate");
     expect(getCacheControl("/srv/dist/feed.xml")).toBe("public, max-age=60, must-revalidate");
+    expect(getCacheControl("/srv/dist/knowledge-graphs/example.svg")).toBe("public, max-age=60, must-revalidate");
     expect(getCacheControl("/srv/dist/fonts/outfit.woff2")).toBe("public, max-age=86400, immutable");
   });
 

@@ -12,7 +12,7 @@ export function KnowledgeGraphFigure({ post }: { post: PublicPost }) {
       </div>
       <div className="knowledge-graph-frame">
         <img
-          src={`/knowledge-graphs/${post.slug}.svg`}
+          src={`/knowledge-graphs/${post.slug}.svg?v=2`}
           width="1600"
           height="1000"
           alt={`Neural knowledge lineage for ${post.title}: ${post.knowledgeGraph.sourceCount} source records shown as neurons with ${post.knowledgeGraph.edges.length} deterministic inter-source links, grouped into evidence neighborhoods and connected to the synthesized paper`}

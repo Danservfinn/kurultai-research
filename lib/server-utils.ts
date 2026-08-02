@@ -22,7 +22,7 @@ export function getContentType(filePath: string): string {
 
 export function getCacheControl(filePath: string): string {
   const extension = path.extname(filePath).toLowerCase();
-  return [".woff2", ".png", ".svg"].includes(extension)
+  return [".woff2", ".png"].includes(extension)
     ? "public, max-age=86400, immutable"
     : "public, max-age=60, must-revalidate";
 }
