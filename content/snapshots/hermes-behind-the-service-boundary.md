@@ -12,7 +12,7 @@ deployment_status: unimplemented
 novelty: medium
 review_rounds: 3
 ---
-<!-- public-redacted-v1; canonical-source-sha256: 215ac8e4795d8e1cd4abdbf2dbe6a56e2108ab0c1fef5e9aee077d90a38edbb2 -->
+<!-- public-redacted-v3-zero-legacy-spelling; canonical-source-sha256: 215ac8e4795d8e1cd4abdbf2dbe6a56e2108ab0c1fef5e9aee077d90a38edbb2 -->
 
 # Hermes Behind the Service Boundary: Trustworthy Customer-Facing Agents
 
@@ -22,7 +22,7 @@ review_rounds: 3
 
 **v2 → v3:** Round 2 steelmanned the architecture but found two publication blockers: a superseded hot source and an unfalsifiable product-value gate. V3 pins the current candidate by hash and labels its `NO-GO` status, narrows the scope to consequential workflows, marks chat as context-only, pins the architecture capsule, and adds risk tiers, customer receipt examples, support operations, unit economics, and explicit product-value promotion gates.
 
-**v3 → v4:** A late-arriving independent round-2 review invalidated the earlier publication decision. V4 resolves that review's two CRITICAL findings (aggregate evidence grading and undefined proof/receipt semantics) and addresses its major operational demands: it withdraws the aggregate B+ grade, defines a claim-shaped evidence ontology and receipt-validity contract, makes authority and support grants instantiable, adds deletion/retention and release-gate matrices, separates normative properties from the Hulagu reference profile, narrows Kurultai reuse claims, and adds architecture/economic ablations. V4 remains unimplemented and unpublished until its exact bytes receive independent review.
+**v3 → v4:** A late-arriving independent round-2 review invalidated the earlier publication decision. V4 resolves that review's two CRITICAL findings (aggregate evidence grading and undefined proof/receipt semantics) and addresses its major operational demands: it withdraws the aggregate B+ grade, defines a claim-shaped evidence ontology and receipt-validity contract, makes authority and support grants instantiable, adds deletion/retention and release-gate matrices, separates normative properties from the Hulegu reference profile, narrows Kurultai reuse claims, and adds architecture/economic ablations. V4 remains unimplemented and unpublished until its exact bytes receive independent review.
 
 The smallest useful correction to the phrase “customer-facing Hermes agent” applies to **consequential, asynchronous, customer-data-bearing, tool-capable work**: **the customer should not meet a general operator agent with a new prompt; the customer should meet a narrow, proof-carrying service whose reasoning may be powered by Hermes behind a bounded interface.** The product surface must establish who is acting, which tenant owns the state, what authority exists, what evidence supports the result, and how the customer can correct, pause, export, delete, or escalate the work.
 
@@ -70,7 +70,7 @@ crossing = principal
 
 If any term is absent, the system has trust debt even when the model answer looks good. The context must survive queues, retries, support access, and publication; it cannot be reconstructed later from customer text or model prose. “Proof-carrying” does not mean exposing chain-of-thought or every internal trace. It means carrying typed evidence references and an honest result state across the boundary.
 
-The envelope is an interface invariant, not a command to create a microservice. A hardened Hermes runtime may serve the customer directly if it can prove the same ingress, tenancy, authority, evidence, and recovery properties. The local Hulagu plan rejected the existing generic Telegram adapter for its specific Parse-before-context contract; that is strong product-specific design evidence, not proof that every general Hermes profile is inherently unsafe. The named primitive was not found in the searched Brain corpus and is synthesized from the local trust-boundary, typed-evidence, tenant-isolation, receipt, outcome-telemetry, and restartable-loop work. This is a **corpus-local novelty claim**, not an assertion of novelty against the external systems or security literature.
+The envelope is an interface invariant, not a command to create a microservice. A hardened Hermes runtime may serve the customer directly if it can prove the same ingress, tenancy, authority, evidence, and recovery properties. The local Hulegu plan rejected the existing generic Telegram adapter for its specific Parse-before-context contract; that is strong product-specific design evidence, not proof that every general Hermes profile is inherently unsafe. The named primitive was not found in the searched Brain corpus and is synthesized from the local trust-boundary, typed-evidence, tenant-isolation, receipt, outcome-telemetry, and restartable-loop work. This is a **corpus-local novelty claim**, not an assertion of novelty against the external systems or security literature.
 
 ## Corpus and evidence method
 
@@ -99,7 +99,7 @@ Evidence grades used here:
 | S9 | `brain/analyses/2026-05-18-agent-e2e-testing-skill-design-memo.md` | Design memo | B | Safe journey testing, tiered targets, evidence packets, and explicit no-danger boundaries. |
 | S10 | `brain/analyses/2026-05-18-hermes-openclaw-observability-design-memo.md` | Inventory/design memo | B | Partial receipt/trace inventory and explicit gaps in correlation, LLM-specific spans, and cost attribution. |
 | S11 | `brain/docs/plans/parse-improvement-loop-design.md` | Control-loop design | B design | File-backed restartability, proposal-first changes, independent verification, first-mile canaries, and accepted-change economics. |
-| S12 | `brain/docs/plans/2026-07-25-kublai-hulagu-job-search-agent-implementation-plan-v3.md` at SHA-256 `07e885de133fc742d33b8a2f8bae25ce25d1d0da5c5efbbaf0d56f38bb3a0ac9` | Superseding planning candidate; current verdict `NO-GO` pending exact-hash review | B design | Dedicated customer service, deterministic state machine, consent, tenant isolation, bounded workers, durable outbox, pause/cancel/delete fencing, and exact acceptance journey. It is not an approved implementation contract and is not implemented. |
+| S12 | `brain/docs/plans/2026-07-25-kublai-hulegu-job-search-agent-implementation-plan-v3.md` at SHA-256 `07e885de133fc742d33b8a2f8bae25ce25d1d0da5c5efbbaf0d56f38bb3a0ac9` | Superseding planning candidate; current verdict `NO-GO` pending exact-hash review | B design | Dedicated customer service, deterministic state machine, consent, tenant isolation, bounded workers, durable outbox, pause/cancel/delete fencing, and exact acceptance journey. It is not an approved implementation contract and is not implemented. |
 | S13 | `brain/analyses/2026-07-13-satya-nadella-reverse-information-paradox.md` | Primary-source study synthesis | B | Tenant-owned learning exhaust, model-swappable local evals, and provider-boundary risk. |
 | S14 | `brain/analyses/2026-06-17-ai-agent-moat-harness-data-flywheels.md` | Public-source analysis | B | Outcome-labeled trajectories and corrections as the durable asset rather than harness novelty alone. |
 | C1 | Hermes session `[private session reference withheld]` | Context-only operator decision history | Not graded | Proposal-only SaaS readiness route; first-mile, support, legal, and admin intent. |
@@ -142,7 +142,7 @@ C1–C4 are context-only session provenance. They are identified by immutable se
 
 ## Theme 1 — Put Hermes behind a narrow product boundary
 
-Hermes is valuable as a reasoning, tool-routing, and workflow substrate. That does not make a prompt-only general chat surface the right default product boundary. The local Hulagu review reached a concrete product-specific decision: customer documents should be accepted by one dedicated Telegram service, normalized and parsed outside model context, moved through a durable state machine, and handed to bounded workers. The existing generic adapter was rejected for that V1 because its attachment/text path did not satisfy the product's stronger Parse-before-context contract and because the general agent enlarged the tool and identity surface (S12). This is not evidence that a hardened Hermes runtime could never implement the envelope internally.
+Hermes is valuable as a reasoning, tool-routing, and workflow substrate. That does not make a prompt-only general chat surface the right default product boundary. The local Hulegu review reached a concrete product-specific decision: customer documents should be accepted by one dedicated Telegram service, normalized and parsed outside model context, moved through a durable state machine, and handed to bounded workers. The existing generic adapter was rejected for that V1 because its attachment/text path did not satisfy the product's stronger Parse-before-context contract and because the general agent enlarged the tool and identity surface (S12). This is not evidence that a hardened Hermes runtime could never implement the envelope internally.
 
 The transferable rule is narrower: the customer surface should be a small protocol, not merely a persona:
 
@@ -220,7 +220,7 @@ A minimum conforming envelope binds identity, authority, execution, and evidence
 
 The concrete serialization is illustrative; the semantic fields are normative. Provider acceptance is an execution observation, not effect proof. A customer report, independent readback, and oracle adjudication are distinct evidence records and do not form a universal monotonic ladder.
 
-### Conformance invariant and Hulagu reference profile
+### Conformance invariant and Hulegu reference profile
 
 A design conforms only if these implementation-neutral properties hold:
 
@@ -585,7 +585,7 @@ Build one narrow workflow. Keep authority risk-tiered and reversible. Make every
 9. `brain/analyses/2026-05-18-agent-e2e-testing-skill-design-memo.md`
 10. `brain/analyses/2026-05-18-hermes-openclaw-observability-design-memo.md`
 11. `brain/docs/plans/parse-improvement-loop-design.md`
-12. `brain/docs/plans/2026-07-25-kublai-hulagu-job-search-agent-implementation-plan-v3.md` (pinned in S12 to SHA-256 `07e885de133fc742d33b8a2f8bae25ce25d1d0da5c5efbbaf0d56f38bb3a0ac9`; mutable `NO-GO` planning candidate)
+12. `brain/docs/plans/2026-07-25-kublai-hulegu-job-search-agent-implementation-plan-v3.md` (pinned in S12 to SHA-256 `07e885de133fc742d33b8a2f8bae25ce25d1d0da5c5efbbaf0d56f38bb3a0ac9`; mutable `NO-GO` planning candidate)
 13. `brain/analyses/2026-07-13-satya-nadella-reverse-information-paradox.md`
 14. `brain/analyses/2026-06-17-ai-agent-moat-harness-data-flywheels.md`
 15. Hermes sessions: `[private session reference withheld]`, `20260721_010341_3a5072`, `20260724_113023_a84419`, `20260725_023435_c2f08d`.

@@ -7,9 +7,9 @@ sources: 26
 evidence_grade: B
 snapshot_cutoff: 2026-07-27T16:05:00Z
 review_rounds: 4
-tags: [whitepaper, hulagu, hermes, bounded-autonomy, gate-compilation, evidence, authority-separation, kurultai]
+tags: [whitepaper, hulegu, hermes, bounded-autonomy, gate-compilation, evidence, authority-separation, kurultai]
 ---
-<!-- public-redacted-v2-brand-normalized; canonical-source-sha256: 9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5 -->
+<!-- public-redacted-v3-zero-legacy-spelling; canonical-source-sha256: 9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5 -->
 
 # Hulegu v2: Compiling Evidence-Bound Admission Decisions
 
@@ -65,32 +65,32 @@ Hashes below identify the exact source bytes used for this paper. S16 preserves 
 
 | ID | Source | Role | Grade | SHA-256 |
 |---|---|---|---|---|
-| S1 | `kurultai/hulagu-g1-source-contracts/docs/plans/2026-07-25-hulagu-full-hermes-instance-v2-revised-plan.md` | Canonical reviewed design and G0–G11 gate plan | B | `6e33bfd952e34b6578f2118c5592128bd40db5a72d8b0e37eac27b85633e8a19` |
-| S2 | `kurultai/hulagu-g1-source-contracts/docs/adr/2026-07-25-hulagu-full-hermes-brokered-capsules.md` | Machine-policy authority ADR | B | `03626eabc51c42944f6fa64a59bbf6c134b86f5615bd065a774f7553b66551e2` |
-| S3 | `kurultai/hulagu-g1-source-contracts/docs/hulagu/THREAT-MODEL-v2.md` | Fail-closed threat boundaries | B | `2b43fe48b87514c84254096706348fb8997673086e6afedc61d0264ba463cb36` |
-| S4 | `kurultai/hulagu-g1-source-contracts/products/hulagu/policies/autonomous-authority-v1.json` | Executable authority policy | A-local | `63bea0292e212da83965004616f90a61b1efba34b16cea042acba90055f68625` |
-| S5 | `kurultai/hulagu-g0-closure-authority-r4/products/hulagu/gates/registry.yaml` | Governing gate-state readback | A-local | `3c7940514a79f881304329d6f4c15186c47dd9edf35a0374474b9144d9524a2a` |
-| S6 | `kurultai/hulagu-g0-closure-authority-r4/products/hulagu/gates/allowed-write-sets/G0.yaml` | Closed G0 mutation surface | A-local | `e4e8efc5512247a1f56e83594f5ce6bbf407ec251d696159afddc64436f93533` |
-| S7 | `brain/docs/plans/reviews/hulagu-autonomy-v1/g0-r9/final-closure-readback-r9c.json` | Role-separated final G0 machine-closure readback | A-local | `2405e033e23c03122b1f186d77cb83eee945b40a57b2b183b3970bd42727976f` |
-| S8 | `kurultai/hulagu-g1-source-contracts/products/hulagu/qa/gates/G1-g1_source_contracts/g1-activation-packet-r1.json` | Fail-closed G1 candidate packet | A-local | `6436e6ac01a44e7632951ac2f6f69a096f4152d458d80e786c8ca32e7f378b66` |
-| S9 | `kurultai/hulagu-g1-source-contracts/products/hulagu/deploy/scripts/gates/compile_g1_activation_packet.py` | Deterministic G1 packet compiler/verifier | A-local | `c45e2139b5a6e92170627ccaf1244ff794d84d97aa026e9053d9a8fd6f9bb27b` |
-| S10 | `kurultai/hulagu-g1-source-contracts/products/hulagu/tests/gates/test_g1_activation_packet.py` | Focused positive and boundary tests | A-local | `5ce1637deb0eaa31e0759ad39c60d7ae4d9d83f397bc82ced1cb42b385c1b8da` |
-| S11 | `brain/docs/plans/reviews/hulagu-autonomy-v1/g1-r26-independent-r25-review.json` | Role-separated review of one-use no-write G1 consumer authority | B+ | `de3229bbdbf6f270eb28ab41382de873e9e0f492773b808f95b8e125c6ca28cb` |
-| S12 | `brain/whitepapers/receipts/hulagu-v2-r2-state-bundle-2026-07-27T1605Z/sources/S12-implementation-ledger.md` | Exact revision-cutoff implementation ledger snapshot; live origin recorded in S25 | B+ | `8d06ad7abd9cb7b0776e9a973bb5f1c39d57369923e882788ff73177b9952f14` |
-| S13 | `brain/whitepapers/receipts/hulagu-v2-r2-state-bundle-2026-07-27T1605Z/sources/S13-brain-log.md` | Exact revision-cutoff operational-log snapshot; live origin recorded in S25 | B | `5c23f774787ab44c1bafe308071c0a6898ad03db8dfe350f4a510ba484383ff8` |
+| S1 | `kurultai/hulegu-g1-source-contracts/docs/plans/2026-07-25-hulegu-full-hermes-instance-v2-revised-plan.md` | Canonical reviewed design and G0–G11 gate plan | B | `6e33bfd952e34b6578f2118c5592128bd40db5a72d8b0e37eac27b85633e8a19` |
+| S2 | `kurultai/hulegu-g1-source-contracts/docs/adr/2026-07-25-hulegu-full-hermes-brokered-capsules.md` | Machine-policy authority ADR | B | `03626eabc51c42944f6fa64a59bbf6c134b86f5615bd065a774f7553b66551e2` |
+| S3 | `kurultai/hulegu-g1-source-contracts/docs/hulegu/THREAT-MODEL-v2.md` | Fail-closed threat boundaries | B | `2b43fe48b87514c84254096706348fb8997673086e6afedc61d0264ba463cb36` |
+| S4 | `kurultai/hulegu-g1-source-contracts/products/hulegu/policies/autonomous-authority-v1.json` | Executable authority policy | A-local | `63bea0292e212da83965004616f90a61b1efba34b16cea042acba90055f68625` |
+| S5 | `kurultai/hulegu-g0-closure-authority-r4/products/hulegu/gates/registry.yaml` | Governing gate-state readback | A-local | `3c7940514a79f881304329d6f4c15186c47dd9edf35a0374474b9144d9524a2a` |
+| S6 | `kurultai/hulegu-g0-closure-authority-r4/products/hulegu/gates/allowed-write-sets/G0.yaml` | Closed G0 mutation surface | A-local | `e4e8efc5512247a1f56e83594f5ce6bbf407ec251d696159afddc64436f93533` |
+| S7 | `brain/docs/plans/reviews/hulegu-autonomy-v1/g0-r9/final-closure-readback-r9c.json` | Role-separated final G0 machine-closure readback | A-local | `2405e033e23c03122b1f186d77cb83eee945b40a57b2b183b3970bd42727976f` |
+| S8 | `kurultai/hulegu-g1-source-contracts/products/hulegu/qa/gates/G1-g1_source_contracts/g1-activation-packet-r1.json` | Fail-closed G1 candidate packet | A-local | `6436e6ac01a44e7632951ac2f6f69a096f4152d458d80e786c8ca32e7f378b66` |
+| S9 | `kurultai/hulegu-g1-source-contracts/products/hulegu/deploy/scripts/gates/compile_g1_activation_packet.py` | Deterministic G1 packet compiler/verifier | A-local | `c45e2139b5a6e92170627ccaf1244ff794d84d97aa026e9053d9a8fd6f9bb27b` |
+| S10 | `kurultai/hulegu-g1-source-contracts/products/hulegu/tests/gates/test_g1_activation_packet.py` | Focused positive and boundary tests | A-local | `5ce1637deb0eaa31e0759ad39c60d7ae4d9d83f397bc82ced1cb42b385c1b8da` |
+| S11 | `brain/docs/plans/reviews/hulegu-autonomy-v1/g1-r26-independent-r25-review.json` | Role-separated review of one-use no-write G1 consumer authority | B+ | `de3229bbdbf6f270eb28ab41382de873e9e0f492773b808f95b8e125c6ca28cb` |
+| S12 | `brain/whitepapers/receipts/hulegu-v2-r2-state-bundle-2026-07-27T1605Z/sources/S12-implementation-ledger.md` | Exact revision-cutoff implementation ledger snapshot; live origin recorded in S25 | B+ | `8d06ad7abd9cb7b0776e9a973bb5f1c39d57369923e882788ff73177b9952f14` |
+| S13 | `brain/whitepapers/receipts/hulegu-v2-r2-state-bundle-2026-07-27T1605Z/sources/S13-brain-log.md` | Exact revision-cutoff operational-log snapshot; live origin recorded in S25 | B | `5c23f774787ab44c1bafe308071c0a6898ad03db8dfe350f4a510ba484383ff8` |
 | S14 | `brain/status/kurultai-living-architecture-capsule.md` | Kurultai current-state and boundary cache | B | `c282af30ff8e1a03fd8d2eef215a031caf9dec61db34e0e613c11f5c5924d84e` |
-| S15 | `kurultai/hulagu-g1-source-contracts/products/hulagu/README.md` | Product purpose and source-only boundary | B | `65b362fde25d0999912b71fb33f9f19b20fc7c97500835abcfd28c8184e1a1fd` |
-| S16 | `brain/whitepapers/receipts/hulagu-v2-source-bundle-2026-07-27T153235Z/manifest.json` | Historical R28/R29 source bundle and sealed execution receipt | A-local | `f83a11447215aaef81de62f5d79023a99ff53a1cdf2f0257eda77304935db0a5` |
-| S17 | `brain/docs/plans/reviews/hulagu-autonomy-v1/g1-r29-independent-r28-review.json` | Role-separated R29 review of the exact R28 family | B+ | `3af4cc405041ae1d0f9215942c8b2de9b4f43518553a6c621db2a9c6e501bbe4` |
-| S18 | `brain/whitepapers/receipts/hulagu-v2-related-work-2026-07-27T155549Z/S18-opa-philosophy.html` | OPA policy-decision and enforcement boundary | A-primary | `08e23304ff47df38c61f41060b3410f495c99d00c268a4d535ca401ade899cae` |
-| S19 | `brain/whitepapers/receipts/hulagu-v2-related-work-2026-07-27T155549Z/S19-in-toto.html` | in-toto actor/step/order-bound supply-chain evidence | A-primary | `fe3ea3905923930ec71dc87a807d5e3cb4d7b4db8f9833bd617e10a77f98546c` |
-| S20 | `brain/whitepapers/receipts/hulagu-v2-related-work-2026-07-27T155549Z/S20-slsa-provenance.html` | SLSA artifact provenance | A-primary | `d6f9509b9921880ef455475daeb0fe32903405cb702ebd471eb4d3460ee4eb44` |
-| S21 | `brain/whitepapers/receipts/hulagu-v2-related-work-2026-07-27T155549Z/S21-tuf-specification.html` | TUF version, expiry, rollback, and freshness protections | A-primary | `31dfa0ce95df3a3be90e9a94a984b95836ad7e88ca5de9ed03e24a7e387cea42` |
-| S22 | `brain/whitepapers/receipts/hulagu-v2-related-work-2026-07-27T155549Z/S22-macaroons.html` | Contextual caveats on cryptographic authorization credentials | A-primary | `0043be2b7c54df77f57a2a6af81c4ae1a406b21ddae11ddf90ee3945f056951d` |
-| S23 | `brain/whitepapers/receipts/hulagu-v2-related-work-2026-07-27T155549Z/S23-yassa-v3-threat-model-architecture-and-tdd-plan.md` | Internal prior design for authenticated principals and exclusive broker mediation | B+ | `fce28d7e9a6bc958566c73ce03c072fc87dbe2b8bd149fa73cbbddbd1fc37777` |
-| S24 | `brain/whitepapers/receipts/hulagu-v2-related-work-2026-07-27T155549Z/manifest.json` | Related-work source URLs, preserved paths, hashes, and claim scopes | A-local | `bf610075617e64a3eab7ca61e87afbe6e3f6ecde841dd2d0fa07b084c2f00584` |
-| S25 | `brain/whitepapers/receipts/hulagu-v2-r2-state-bundle-2026-07-27T1605Z/manifest.json` | Revision-cutoff bundle preserving ledger/log and R30 bytes | A-local | `9afa1f2c2d700472e596b8dbd9eb8de45725da978107ef18396b19b1f41fa50d` |
-| S26 | `brain/whitepapers/receipts/hulagu-v2-r2-state-bundle-2026-07-27T1605Z/evidence/g1-r30-no-write-adoption-receipt.json` | Frozen R30 no-write adoption receipt; semantic review pending | B+ | `864a7479bc96f3c43321acc8f3d0dd359c3dc814a2df3ef8fad813dec4d86ddf` |
+| S15 | `kurultai/hulegu-g1-source-contracts/products/hulegu/README.md` | Product purpose and source-only boundary | B | `65b362fde25d0999912b71fb33f9f19b20fc7c97500835abcfd28c8184e1a1fd` |
+| S16 | `brain/whitepapers/receipts/hulegu-v2-source-bundle-2026-07-27T153235Z/manifest.json` | Historical R28/R29 source bundle and sealed execution receipt | A-local | `f83a11447215aaef81de62f5d79023a99ff53a1cdf2f0257eda77304935db0a5` |
+| S17 | `brain/docs/plans/reviews/hulegu-autonomy-v1/g1-r29-independent-r28-review.json` | Role-separated R29 review of the exact R28 family | B+ | `3af4cc405041ae1d0f9215942c8b2de9b4f43518553a6c621db2a9c6e501bbe4` |
+| S18 | `brain/whitepapers/receipts/hulegu-v2-related-work-2026-07-27T155549Z/S18-opa-philosophy.html` | OPA policy-decision and enforcement boundary | A-primary | `08e23304ff47df38c61f41060b3410f495c99d00c268a4d535ca401ade899cae` |
+| S19 | `brain/whitepapers/receipts/hulegu-v2-related-work-2026-07-27T155549Z/S19-in-toto.html` | in-toto actor/step/order-bound supply-chain evidence | A-primary | `fe3ea3905923930ec71dc87a807d5e3cb4d7b4db8f9833bd617e10a77f98546c` |
+| S20 | `brain/whitepapers/receipts/hulegu-v2-related-work-2026-07-27T155549Z/S20-slsa-provenance.html` | SLSA artifact provenance | A-primary | `d6f9509b9921880ef455475daeb0fe32903405cb702ebd471eb4d3460ee4eb44` |
+| S21 | `brain/whitepapers/receipts/hulegu-v2-related-work-2026-07-27T155549Z/S21-tuf-specification.html` | TUF version, expiry, rollback, and freshness protections | A-primary | `31dfa0ce95df3a3be90e9a94a984b95836ad7e88ca5de9ed03e24a7e387cea42` |
+| S22 | `brain/whitepapers/receipts/hulegu-v2-related-work-2026-07-27T155549Z/S22-macaroons.html` | Contextual caveats on cryptographic authorization credentials | A-primary | `0043be2b7c54df77f57a2a6af81c4ae1a406b21ddae11ddf90ee3945f056951d` |
+| S23 | `brain/whitepapers/receipts/hulegu-v2-related-work-2026-07-27T155549Z/S23-yassa-v3-threat-model-architecture-and-tdd-plan.md` | Internal prior design for authenticated principals and exclusive broker mediation | B+ | `fce28d7e9a6bc958566c73ce03c072fc87dbe2b8bd149fa73cbbddbd1fc37777` |
+| S24 | `brain/whitepapers/receipts/hulegu-v2-related-work-2026-07-27T155549Z/manifest.json` | Related-work source URLs, preserved paths, hashes, and claim scopes | A-local | `bf610075617e64a3eab7ca61e87afbe6e3f6ecde841dd2d0fa07b084c2f00584` |
+| S25 | `brain/whitepapers/receipts/hulegu-v2-r2-state-bundle-2026-07-27T1605Z/manifest.json` | Revision-cutoff bundle preserving ledger/log and R30 bytes | A-local | `9afa1f2c2d700472e596b8dbd9eb8de45725da978107ef18396b19b1f41fa50d` |
+| S26 | `brain/whitepapers/receipts/hulegu-v2-r2-state-bundle-2026-07-27T1605Z/evidence/g1-r30-no-write-adoption-receipt.json` | Frozen R30 no-write adoption receipt; semantic review pending | B+ | `864a7479bc96f3c43321acc8f3d0dd359c3dc814a2df3ef8fad813dec4d86ddf` |
 
 **Overall evidence grade: B.** The three-plane architecture is supported as source-level design, not deployed implementation. G0's accepted local transition, G1 candidate byte identity, and focused tests are mechanically reproducible. They demonstrate a cooperative decision workflow, not authenticated principal separation or complete mediation. G1 activation readiness remains unproven, the liveness falsifier is triggered, and operational-benefit claims remain grade C or lower.
 
@@ -390,12 +390,12 @@ Four read-only publication reviews challenged successive drafts.
 
 The reviews are retained at:
 
-- `brain/whitepapers/drafts/hulagu-v2-critique-r1-claude.md`
-- `brain/whitepapers/drafts/hulagu-v2-critique-r2-codex.md`
-- `brain/whitepapers/drafts/hulagu-v2-critique-r3-delegated-evidence-audit.md`
-- `brain/whitepapers/drafts/hulagu-v2-critique-r4-delegated-publication-integrity.md`
+- `brain/whitepapers/drafts/hulegu-v2-critique-r1-claude.md`
+- `brain/whitepapers/drafts/hulegu-v2-critique-r2-codex.md`
+- `brain/whitepapers/drafts/hulegu-v2-critique-r3-delegated-evidence-audit.md`
+- `brain/whitepapers/drafts/hulegu-v2-critique-r4-delegated-publication-integrity.md`
 
-The incorrect first snapshot receipt is retained but explicitly marked `SUPERSEDED_INVALID_SNAPSHOT` at `brain/whitepapers/drafts/hulagu-v2-source-snapshot-r0-superseded.json`.
+The incorrect first snapshot receipt is retained but explicitly marked `SUPERSEDED_INVALID_SNAPSHOT` at `brain/whitepapers/drafts/hulegu-v2-source-snapshot-r0-superseded.json`.
 
 ## Revision Log
 
@@ -410,7 +410,7 @@ All critical findings from all four review rounds were addressed before republic
 - Recast the core mechanism as a cooperative deterministic admission decision rather than an unforgeable capability; added authenticated-principal, durable-replay, exclusive-mediator, and same-UID bypass proof debt.
 - Marked the proof-contract liveness falsifier **triggered**, paused scale-out, added IR-008 as counterevidence, and inserted direct bypass experiments.
 - Added primary-source related work and positioned the contribution as a Hulegu case study rather than a novel authorization primitive.
-- Bound the revised paper, four critiques, related-work archive, and revision state bundle in `brain/whitepapers/receipts/hulagu-v2-publication-finalization-r2.json`.
+- Bound the revised paper, four critiques, related-work archive, and revision state bundle in `brain/whitepapers/receipts/hulegu-v2-publication-finalization-r2.json`.
 
 ## Conclusion
 

@@ -24,7 +24,7 @@ export type PublicPost = {
   provenance: Provenance;
   sourceSha256?: string;
   sourceArtifactSha256?: string;
-  publicEdition?: "public-redacted-v1" | "public-redacted-v2-brand-normalized";
+  publicEdition?: "public-redacted-v1" | "public-redacted-v2-brand-normalized" | "public-redacted-v3-zero-legacy-spelling";
   publicationNote?: string;
   canonicalSlug?: string;
   aliases?: string[];

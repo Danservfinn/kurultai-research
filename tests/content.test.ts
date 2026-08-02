@@ -12,6 +12,7 @@ describe("public content boundary", () => {
       "self-improving-ai-needs-laws",
     ]);
     expect(posts.every((post) => post.public && post.status === "published")).toBe(true);
+    expect(posts.every((post) => !/hulagu/i.test(post.content))).toBe(true);
     expect(posts.map((post) => post.date)).toEqual([...posts.map((post) => post.date)].sort().reverse());
   });
 
