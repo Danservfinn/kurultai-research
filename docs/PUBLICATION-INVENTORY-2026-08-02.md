@@ -6,7 +6,7 @@ The authoritative whitepaper corpus is the three-row canonical table in Brain's 
 
 | Canonical whitepaper | Brain state | Review/evidence state | Public transformation | Blog route |
 |---|---|---|---|---|
-| Hulagu v2: Compiling Evidence-Bound Admission Decisions | `published`, R2 | Evidence B; 26 sources; four adversarial rounds; liveness falsifier triggered and preserved | 32 local absolute paths converted to repository-relative evidence references | `/research/hulagu-v2-compiling-autonomy-through-evidence-bound-gates/` |
+| Hulegu v2: Compiling Evidence-Bound Admission Decisions | `published`, R2; canonical reviewed source retains the former Hulagu name | Evidence B; 26 sources; four adversarial rounds; liveness falsifier triggered and preserved | 32 local absolute paths converted to repository-relative evidence references; public product name normalized to Hulegu | `/research/hulegu-v2-compiling-autonomy-through-evidence-bound-gates/` |
 | Hermes Behind the Service Boundary | `published` | Architecture B; customer effects C; three adversarial rounds; explicitly unimplemented | 29 local paths generalized and two private session identifiers withheld | `/research/hermes-behind-the-service-boundary/` |
 | Typed Evidence and Authority-Separated Agent Architecture | Canonical index says `published`; file frontmatter remains `active` | 15 manifest entries; final v3 after two critique rounds; operational benefit still unproven | Two local paths converted to repository-relative evidence references | `/research/typed-evidence-authority-separated-agent-architecture/` |
 
