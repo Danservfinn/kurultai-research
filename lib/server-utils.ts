@@ -16,6 +16,7 @@ const MIME: Record<string, string> = {
 export function getContentType(filePath: string): string {
   const name = path.basename(filePath);
   if (name === "feed.json") return "application/feed+json; charset=utf-8";
+  if (name === "citation.json") return "application/vnd.citationstyles.csl+json; charset=utf-8";
   if (name === "feed.xml") return "application/atom+xml; charset=utf-8";
   return MIME[path.extname(filePath).toLowerCase()] ?? "application/octet-stream";
 }

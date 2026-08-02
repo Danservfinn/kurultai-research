@@ -49,6 +49,7 @@ Published discovery and ingestion surfaces:
 - `/api/v1/research/:slug.json` — self-contained typed article response
 - `/api/v1/schema.json` — JSON Schema for item responses
 - `/research/:slug/index.md` — exact frozen Markdown
+- `/research/:slug/citation.json` — CSL-JSON citation metadata
 - `/feed.json` — JSON Feed 1.1
 - `/feed.xml` — Atom
 - `/agents/` — copy-ready human/agent usage guide

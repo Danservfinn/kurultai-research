@@ -16,6 +16,7 @@ describe("static server path resolution", () => {
   it("serves agent representations with specific media types", () => {
     expect(getContentType("/srv/dist/research/example/index.md")).toBe("text/markdown; charset=utf-8");
     expect(getContentType("/srv/dist/feed.json")).toBe("application/feed+json; charset=utf-8");
+    expect(getContentType("/srv/dist/research/example/citation.json")).toBe("application/vnd.citationstyles.csl+json; charset=utf-8");
     expect(getContentType("/srv/dist/feed.xml")).toBe("application/atom+xml; charset=utf-8");
     expect(getContentType("/srv/dist/sitemap.xml")).toBe("application/xml; charset=utf-8");
   });

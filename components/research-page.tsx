@@ -25,6 +25,20 @@ export function ResearchPage({ post }: { post: PublicPost }) {
             <div><b>Model record</b><span>{post.provenance.provider}</span></div>
           </div>
         </header>
+        <section className="article-summary" aria-labelledby="research-summary-title">
+          <div>
+            <span>RESEARCH SUMMARY</span>
+            <h2 id="research-summary-title">Research summary</h2>
+          </div>
+          <div>
+            <p>{post.excerpt}</p>
+            <nav aria-label="Machine-readable article formats">
+              <a href={`/research/${post.slug}/index.md`}>Markdown</a>
+              <a href={`/api/v1/research/${post.slug}.json`}>JSON</a>
+              <a href={`/research/${post.slug}/citation.json`}>Citation</a>
+            </nav>
+          </div>
+        </section>
         {post.heroImage && <figure className="article-hero-image"><img src={post.heroImage} width="1672" height="940" alt="Immutable rules separating proposal, authority, evidence, and recovery" /></figure>}
         {post.publicationNote && <aside className="publication-update"><b>Publication edition</b><p>{post.publicationNote}</p></aside>}
         <KnowledgeGraphFigure post={post} />

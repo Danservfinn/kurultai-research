@@ -169,6 +169,21 @@ export function buildAgentArtifacts(posts: PublicPost[], site: string): Artifact
   for (const [index, post] of posts.entries()) {
     const item = items[index];
     artifacts[`research/${post.slug}/index.md`] = post.content;
+    const [year, month, day] = post.date.split("-").map(Number);
+    artifacts[`research/${post.slug}/citation.json`] = JSON.stringify({
+      id: post.slug,
+      type: "report",
+      title: post.title,
+      ...(post.subtitle ? { subtitle: post.subtitle } : {}),
+      author: [{ literal: "Kurultai Research" }],
+      issued: { "date-parts": [[year, month, day]] },
+      URL: item.urls.html,
+      publisher: "Kurultai Research",
+      genre: "Whitepaper",
+      abstract: post.excerpt,
+      keyword: post.topic,
+      language: "en-US",
+    }, null, 2) + "\n";
     artifacts[`api/v1/research/${post.slug}.json`] = JSON.stringify({
       schema_version: "kurultai.research.item.v1",
       item,
@@ -187,6 +202,7 @@ export function buildAgentArtifacts(posts: PublicPost[], site: string): Artifact
     `- [Complete corpus](${canonicalSite}/llms-full.txt): Every published paper as Markdown in one request.`,
     `- [Index JSON Schema](${canonicalSite}/api/v1/index.schema.json): Contract for the bounded discovery index.`,
     `- [Item JSON Schema](${canonicalSite}/api/v1/schema.json): Contract for self-contained item responses.`,
+    `- Citation metadata: every paper exposes CSL-JSON at \`${canonicalSite}/research/:slug/citation.json\`.`,
     `- [JSON Feed](${canonicalSite}/feed.json): Standard JSON Feed 1.1 for incremental discovery.`,
     `- [Atom feed](${canonicalSite}/feed.xml): Standard Atom feed for polling clients.`,
     `- [Human and CLI guide](${canonicalSite}/agents/): Copy-ready curl and jq examples.`,

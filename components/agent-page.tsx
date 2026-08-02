@@ -16,7 +16,7 @@ export function AgentPage() {
             <span>AGENT INTERFACE / V1</span>
             <h1>Research without<br />the rendering layer.</h1>
           </div>
-          <p>Stable JSON, exact Markdown, content hashes, and standard feeds. No browser automation, scraping, authentication, or client JavaScript required.</p>
+          <p>Stable JSON, exact Markdown, citation records, content hashes, and standard feeds. No browser automation, scraping, authentication, or client JavaScript required.</p>
         </section>
 
         <section className="agent-start" aria-labelledby="agent-start-title">
@@ -41,6 +41,7 @@ export function AgentPage() {
             <a href="/api/v1/index.json"><code>/api/v1/index.json</code><span>Bounded discovery metadata, provenance, URLs, and hashes</span><b>application/json</b></a>
             <a href="/research/verification-solvency-agent-commit-rates/index.md"><code>/research/:slug/index.md</code><span>Exact, frozen article Markdown</span><b>text/markdown</b></a>
             <a href="/api/v1/research/verification-solvency-agent-commit-rates.json"><code>/api/v1/research/:slug.json</code><span>Metadata and Markdown body in one typed response</span><b>application/json</b></a>
+            <a href="/research/verification-solvency-agent-commit-rates/citation.json"><code>/research/:slug/citation.json</code><span>CSL-JSON citation metadata for references and knowledge bases</span><b>application/vnd.citationstyles.csl+json</b></a>
             <a href="/llms-full.txt"><code>/llms-full.txt</code><span>Complete corpus in one request</span><b>text/plain</b></a>
             <a href="/feed.json"><code>/feed.json</code><span>JSON Feed 1.1 for incremental polling</span><b>application/feed+json</b></a>
             <a href="/feed.xml"><code>/feed.xml</code><span>Atom feed for standard readers</span><b>application/atom+xml</b></a>

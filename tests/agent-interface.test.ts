@@ -48,6 +48,22 @@ describe("agent-first research interface", () => {
     }
   });
 
+  it("publishes CSL-JSON citation records for every paper", () => {
+    for (const post of posts) {
+      const citation = JSON.parse(artifacts[`research/${post.slug}/citation.json`]);
+      expect(citation).toMatchObject({
+        id: post.slug,
+        type: "report",
+        title: post.title,
+        issued: { "date-parts": [[Number(post.date.slice(0, 4)), Number(post.date.slice(5, 7)), Number(post.date.slice(8, 10))]] },
+        URL: `${SITE}/research/${post.slug}/`,
+        publisher: "Kurultai Research",
+        genre: "Whitepaper",
+      });
+      expect(citation.author).toEqual([{ literal: "Kurultai Research" }]);
+    }
+  });
+
   it("offers common discovery formats and a complete single-request corpus", () => {
     expect(artifacts["llms.txt"]).toContain("## Agent ingestion");
     expect(artifacts["llms.txt"]).toContain(`${SITE}/api/v1/index.json`);
