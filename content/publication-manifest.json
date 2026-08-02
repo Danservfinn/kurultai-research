@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "posts": [
+    {
+      "slug": "self-improving-ai-needs-laws",
+      "sourceFile": "self-improving-ai-needs-laws.md",
+      "sourceSha256": "92d8de75f4f8b8c70c0d4483fa7012bc2110042f77ad03278eb769961788a312",
+      "title": "Self-Improving AI Needs Laws It Cannot Rewrite",
+      "subtitle": "Why green tests do not prove a governed release",
+      "excerpt": "A containment-first architecture for self-improvement: authority outside the proposer, exact artifact identity, recoverable transitions, and history the loop cannot rewrite.",
+      "date": "2026-07-24",
+      "topic": "AI systems",
+      "readingMinutes": 14,
+      "public": true,
+      "status": "published",
+      "featured": true,
+      "heroImage": "/yassa-immutable-laws.png",
+      "provenance": {
+        "synthesis": "Kurultai research synthesis from 20 public sources and internal engineering evidence",
+        "review": "Independent exact-candidate review approved the frozen source snapshot",
+        "provider": "Editorial synthesis; publication does not claim a Z.AI-authored artifact"
+      }
+    }
+  ]
+}
