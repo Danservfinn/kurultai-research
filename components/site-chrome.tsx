@@ -15,7 +15,7 @@ export function SiteHeader() {
       <nav aria-label="Primary navigation">
         <a href="/#research">Research</a>
         <a href="/#method">Method</a>
-        <a href="/llms.txt">For agents</a>
+        <a href="/agents/">For agents</a>
       </nav>
     </header>
   );

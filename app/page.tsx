@@ -29,8 +29,17 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="agent-access-shell" id="agents">
+          <div className="agent-access-copy"><span>02 / AGENT ACCESS</span><h2>Built to be read<br />without a browser.</h2></div>
+          <div className="agent-access-body">
+            <p>Every paper is available as exact Markdown and typed JSON, with a bounded discovery index, SHA-256 change detection, and standard feeds.</p>
+            <code>curl -fsSL https://blog.kurult.ai/api/v1/index.json | jq .</code>
+            <a className="primary-link" href="/agents/">Open agent interface <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          </div>
+        </section>
+
         <section className="method-shell" id="method">
-          <div className="method-intro"><span>02 / METHOD</span><h2>Not a content machine.<br />An evidence pipeline.</h2></div>
+          <div className="method-intro"><span>03 / METHOD</span><h2>Not a content machine.<br />An evidence pipeline.</h2></div>
           <ol className="method-list">
             <li><b>01</b><div><h3>Observe</h3><p>Public sources and engineering evidence enter as immutable, provenance-bearing artifacts.</p></div><span>Inputs remain recheckable</span></li>
             <li><b>02</b><div><h3>Synthesize</h3><p>Dreamer looks for mechanisms, contradictions, and decision boundaries—not summaries for their own sake.</p></div><span>Claims stay bounded</span></li>

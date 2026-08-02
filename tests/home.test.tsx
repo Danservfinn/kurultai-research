@@ -8,6 +8,7 @@ describe("research index", () => {
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/knowledge that survives review/i);
     expect(screen.getByText(/dreamer synthesizes\. standing policy governs release\./i)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /read the latest synthesis/i })).toHaveAttribute("href", "/research/verification-solvency-agent-commit-rates/");
+    expect(screen.getByRole("link", { name: /open agent interface/i })).toHaveAttribute("href", "/agents/");
     expect(screen.getByText(/5 papers/i)).toBeInTheDocument();
   });
 });

@@ -29,6 +29,28 @@ npm start
 
 The build emits static HTML, CSS, fonts, images, `robots.txt`, `sitemap.xml`, `llms.txt`, and a hash manifest under `dist/`. A minimal loopback-only Node server supplies security headers and a `/health` endpoint.
 
+## Agent interface
+
+Agents should start from the bounded index and fetch only changed Markdown records:
+
+```bash
+curl -fsSL https://blog.kurult.ai/api/v1/index.json | jq .
+curl -fsSL https://blog.kurult.ai/research/<slug>/index.md
+```
+
+Published discovery and ingestion surfaces:
+
+- `/llms.txt` — compact discovery and ingestion instructions
+- `/llms-full.txt` — complete Markdown corpus in one request
+- `/api/v1/index.json` — bounded metadata, provenance, URLs, and SHA-256 digests
+- `/api/v1/index.schema.json` — JSON Schema for the discovery index
+- `/api/v1/research/:slug.json` — self-contained typed article response
+- `/api/v1/schema.json` — JSON Schema for item responses
+- `/research/:slug/index.md` — exact frozen Markdown
+- `/feed.json` — JSON Feed 1.1
+- `/feed.xml` — Atom
+- `/agents/` — copy-ready human/agent usage guide
+
 ## Architecture
 
 ```text

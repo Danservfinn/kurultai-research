@@ -81,6 +81,40 @@ img { max-width: 100%; height: auto; }
 .research-entry:hover .entry-arrow { transform: rotate(45deg); background: var(--signal); }
 .empty-state { padding: 5rem 0; }.empty-state h3 { font-size: 2rem; }.empty-state p { color: var(--ink-soft); }
 
+.agent-access-shell { padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 4vw, 4.5rem); border-top: 1px solid var(--line); background: var(--paper-deep); display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(3rem, 9vw, 10rem); }
+.agent-access-copy > span, .agent-page span, .agent-start-copy > span, .agent-contract-heading > span, .agent-rules > span { font-family: "JetBrains Mono", monospace; font-size: .67rem; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); }
+.agent-access-copy h2, .agent-start-copy h2, .agent-contract-heading h2 { margin: 2rem 0 0; font-size: clamp(2.8rem, 5vw, 5rem); line-height: .98; letter-spacing: -.06em; font-weight: 520; }
+.agent-access-body { align-self: end; display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+.agent-access-body p { margin: 0; max-width: 52ch; color: var(--ink-soft); font-size: 1rem; line-height: 1.65; }
+.agent-access-body > code { width: 100%; padding: 1.25rem; overflow-x: auto; border-left: 2px solid var(--signal); background: var(--ink); color: var(--white); font: .76rem/1.6 "JetBrains Mono", monospace; }
+
+.agent-page { padding: 0 clamp(1.25rem, 4vw, 4.5rem) 7rem; }
+.agent-hero { min-height: 68dvh; padding: clamp(5rem, 10vw, 9rem) 0 4rem; display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(3rem, 9vw, 10rem); align-items: end; border-bottom: 1px solid var(--ink); }
+.agent-hero h1 { margin: 2rem 0 0; font-size: clamp(3.4rem, 7vw, 7.2rem); line-height: .9; letter-spacing: -.07em; font-weight: 520; }
+.agent-hero > p { margin: 0; max-width: 42ch; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; }
+.agent-start { padding: clamp(5rem, 9vw, 8rem) 0; display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(3rem, 8vw, 9rem); border-bottom: 1px solid var(--line); }
+.agent-start-copy p { max-width: 42ch; margin-top: 2rem; color: var(--ink-soft); line-height: 1.65; }
+.agent-start-copy code, .agent-rules code { padding: .12rem .3rem; background: var(--paper-deep); font: .82em "JetBrains Mono", monospace; }
+.command-stack { border-top: 1px solid var(--ink); }
+.command-line { padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+.command-line > div { display: flex; gap: 1rem; margin-bottom: .9rem; font: .62rem/1 "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .1em; }
+.command-line b { color: var(--accent); }.command-line span { color: var(--ink-soft); }
+.command-line pre { margin: 0; padding: 1rem 1.15rem; overflow-x: auto; background: var(--ink); color: var(--white); font: .76rem/1.5 "JetBrains Mono", monospace; }
+.agent-contract { padding: clamp(5rem, 9vw, 8rem) 0; border-bottom: 1px solid var(--line); }
+.agent-contract-heading { display: grid; grid-template-columns: .5fr 1.5fr; gap: 2rem; margin-bottom: 4rem; }
+.agent-contract-heading h2 { margin-top: -.35rem; max-width: 850px; }
+.endpoint-list { border-top: 1px solid var(--ink); }
+.endpoint-list a { display: grid; grid-template-columns: minmax(250px,.75fr) minmax(300px,1fr) auto; gap: 2rem; align-items: center; padding: 1.6rem 0; border-bottom: 1px solid var(--line); transition: padding .3s cubic-bezier(.16,1,.3,1), background .3s; }
+.endpoint-list a:hover { padding-inline: 1rem; background: rgba(255,255,255,.35); }
+.endpoint-list code { font: .76rem/1.4 "JetBrains Mono", monospace; }
+.endpoint-list span { color: var(--ink-soft); font-family: "Outfit", sans-serif; font-size: .88rem; letter-spacing: 0; text-transform: none; }
+.endpoint-list b { color: var(--accent); font: 500 .58rem/1 "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.agent-rules { padding: clamp(5rem, 9vw, 8rem) 0 0; }
+.agent-rules ol { list-style: none; margin: 3rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2,1fr); border-top: 1px solid var(--ink); }
+.agent-rules li { padding: 2rem 2rem 2rem 0; border-bottom: 1px solid var(--line); }
+.agent-rules li:nth-child(odd) { border-right: 1px solid var(--line); }.agent-rules li:nth-child(even) { padding-left: 2rem; }
+.agent-rules b { font-size: 1.2rem; font-weight: 540; }.agent-rules p { margin: .7rem 0 0; max-width: 48ch; color: var(--ink-soft); line-height: 1.55; font-size: .9rem; }
+
 .method-shell { padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 4vw, 4.5rem); background: var(--ink); color: var(--white); display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(3rem, 8vw, 9rem); }
 .method-intro { position: sticky; top: 120px; align-self: start; }
 .method-intro > span { color: var(--signal); }
@@ -150,6 +184,9 @@ img { max-width: 100%; height: auto; }
   .signal-field { min-height: 460px; border-left: 0; border-top: 1px solid var(--line); }
   .hero-aside { grid-template-columns: 1fr; }.hero-aside p { justify-self: start; }
   .section-heading { grid-template-columns: 1fr; }.section-heading h2 { margin-top: 0; }
+  .agent-access-shell, .agent-hero, .agent-start { grid-template-columns: 1fr; }
+  .agent-contract-heading { grid-template-columns: 1fr; }.agent-contract-heading h2 { margin-top: 0; }
+  .endpoint-list a { grid-template-columns: 1fr; gap: .75rem; }
   .method-shell { grid-template-columns: 1fr; }.method-intro { position: static; }
   .site-footer { grid-template-columns: 1fr; }.site-footer > div { justify-content: flex-start; }
   .article-header { grid-template-columns: 1fr; }.article-meta,.article-header h1,.article-subtitle,.provenance-strip { grid-column: 1; }.article-meta { flex-direction: row; margin-bottom: 2rem; }.article-header h1 { margin-top: 0; }
@@ -164,6 +201,9 @@ img { max-width: 100%; height: auto; }
   .research-entry { grid-template-columns: 34px 1fr; gap: 1rem; }.entry-arrow { grid-column: 2; width: 46px; height: 46px; justify-self: end; }
   .entry-copy h3 { font-size: 2.2rem; }.eyebrow-row span:nth-child(3) { display: none; }
   .method-list li { grid-template-columns: 34px 1fr; }.method-list li > span { grid-column: 2; margin-top: .5rem; }
+  .agent-hero { min-height: auto; }.agent-hero h1 { font-size: clamp(3rem, 14vw, 4.5rem); }
+  .agent-rules ol { grid-template-columns: 1fr; }.agent-rules li, .agent-rules li:nth-child(even) { padding: 1.5rem 0; border-right: 0; }
+  .command-line pre { margin-inline: -1rem; }
   .manifesto-shell { min-height: 52dvh; }
   .article-page { padding-inline: 1rem; }.article-header h1 { font-size: 3.35rem; }.article-meta { flex-wrap: wrap; }.article-hero-image { margin-inline: -1rem; border-left: 0; border-right: 0; }
   .prose-shell { font-size: 1rem; }.prose-shell table { display: block; overflow-x: auto; }
