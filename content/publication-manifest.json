@@ -2,6 +2,28 @@
   "schemaVersion": 2,
   "posts": [
     {
+      "slug": "decision-reconstructible-agent-memory",
+      "sourceFile": "decision-reconstructible-agent-memory.md",
+      "sourceSha256": "b705fcd5ed7a422f641c298d6fd2f3c618f8eebb834082e11acae1ea0a27f6d6",
+      "sourceArtifactSha256": "04eb538ee10c969d7a4be11aa7ce3bb2c51a659b3bf918ca8a9206f6e11925a8",
+      "publicEdition": "public-redacted-v1",
+      "title": "Reuse-Class Admission for Agent Memory: Upgrade Evidence When Context Becomes Consequential",
+      "subtitle": "Storage permission is not evidentiary eligibility",
+      "excerpt": "A consequence-sensitive evidence-admission rule for agent memory: lightweight records remain storable, but consequential reuse requires declared edges, rationale origins, and target-use upgrades.",
+      "date": "2026-08-02",
+      "topic": "Agent memory",
+      "readingMinutes": 16,
+      "public": true,
+      "status": "published",
+      "featured": true,
+      "publicationNote": "Public redacted edition published under standing operator authorization after an exact-byte independent review and claim-level source check. Local absolute paths were replaced with public source titles; architecture evidence remains B, novelty and outcomes remain C, and the six-test fixture proves only authored toy invariants with no runtime authority.",
+      "provenance": {
+        "synthesis": "Kurultai synthesis from eight reviewed evidence sources, one Dreamer hypothesis packet, and one executed local toy fixture",
+        "review": "Two adversarial revision rounds plus an independent exact-byte PASS; residual empirical, cost, calibration, and latent-context proof debt remains explicit",
+        "provider": "Multi-stage editorial synthesis; the Dreamer hypothesis packet used Z.AI glm-5.2 but is not sole authorship or efficacy evidence"
+      }
+    },
+    {
       "slug": "verification-solvency-agent-commit-rates",
       "sourceFile": "verification-solvency-agent-commit-rates.md",
       "sourceSha256": "2ab8dfb6a747fa1d843854d763c373542bb6404e824529ba15b2b5185e613259",

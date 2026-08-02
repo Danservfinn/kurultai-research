@@ -5,6 +5,7 @@ import { getAllPosts, getPostBySlug } from "@/lib/content";
 import { renderKnowledgeGraphSvg } from "@/lib/knowledge-graph-svg";
 
 const EXPECTED_SOURCE_COUNTS: Record<string, number> = {
+  "decision-reconstructible-agent-memory": 10,
   "verification-solvency-agent-commit-rates": 8,
   "hulegu-v2-compiling-autonomy-through-evidence-bound-gates": 26,
   "hermes-behind-the-service-boundary": 18,
@@ -16,7 +17,7 @@ describe("whitepaper knowledge graphs", () => {
   it("derives a public-safe source lineage graph for every published paper", () => {
     const posts = getAllPosts();
 
-    expect(posts).toHaveLength(5);
+    expect(posts).toHaveLength(6);
     for (const post of posts) {
       expect(post.knowledgeGraph.sourceCount).toBe(EXPECTED_SOURCE_COUNTS[post.slug]);
       expect(post.knowledgeGraph.families.length).toBeGreaterThan(1);
@@ -44,6 +45,14 @@ describe("whitepaper knowledge graphs", () => {
     expect(svg).toContain("SYNTHESIZED WHITEPAPER");
     expect(svg).toContain("aria-labelledby=");
     expect(svg).not.toMatch(/\/(?:Users|home)\//);
+  });
+
+  it("keeps long synthesized-paper titles fully visible instead of ellipsizing them", () => {
+    const post = getPostBySlug("decision-reconstructible-agent-memory");
+    expect(post).toBeDefined();
+    const svg = renderKnowledgeGraphSvg(post!);
+    expect(svg).toContain(post!.title);
+    expect(svg).not.toContain("Context Becomes…");
   });
 
   it("shows the graph image and explains what its edges mean", () => {

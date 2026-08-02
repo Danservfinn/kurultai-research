@@ -4,6 +4,19 @@
   "generatedAt": "2026-08-02",
   "items": [
     {
+      "sourceFile": "decision-reconstructible-agent-memory.md",
+      "publicFile": "decision-reconstructible-agent-memory.md",
+      "sourceArtifactSha256": "04eb538ee10c969d7a4be11aa7ce3bb2c51a659b3bf918ca8a9206f6e11925a8",
+      "sourceSha256": "b705fcd5ed7a422f641c298d6fd2f3c618f8eebb834082e11acae1ea0a27f6d6",
+      "bytes": 27901,
+      "words": 3470,
+      "readingMinutes": 16,
+      "transform": "public-redacted-v1",
+      "privatePathsRemaining": 0,
+      "sessionIdsRemaining": 0,
+      "wikilinksRemaining": 0
+    },
+    {
       "sourceFile": "verification-solvency-agent-commit-rates.md",
       "publicFile": "verification-solvency-agent-commit-rates.md",
       "sourceArtifactSha256": "2ab8dfb6a747fa1d843854d763c373542bb6404e824529ba15b2b5185e613259",
