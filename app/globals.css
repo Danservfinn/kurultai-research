@@ -114,6 +114,16 @@ img { max-width: 100%; height: auto; }
 .publication-update { width: min(760px, 100%); margin: 3rem auto -4rem; padding: 1rem 1.2rem; border-left: 2px solid var(--accent); background: rgba(106,123,88,.08); display: grid; grid-template-columns: 140px 1fr; gap: 1rem; }
 .publication-update b { font: .62rem/1.4 "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
 .publication-update p { margin: 0; color: var(--ink-soft); font-size: .8rem; line-height: 1.5; }
+.knowledge-graph { width: min(1280px, 100%); margin: clamp(5rem, 10vw, 9rem) auto 0; }
+.knowledge-graph-heading { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; margin-bottom: 1.35rem; }
+.knowledge-graph-heading span, .knowledge-graph figcaption > span { font: .62rem/1 "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.knowledge-graph-heading h2 { margin: .9rem 0 0; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1; letter-spacing: -.05em; font-weight: 540; }
+.knowledge-graph-heading strong { padding-bottom: .35rem; font: 600 .68rem/1 "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.knowledge-graph-frame { position: relative; overflow: hidden; border: 1px solid var(--line); background: var(--ink); box-shadow: 0 24px 70px -42px rgba(24,32,28,.55); }
+.knowledge-graph-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.12); }
+.knowledge-graph-frame img { width: 100%; display: block; }
+.knowledge-graph figcaption { display: grid; grid-template-columns: 150px minmax(0, 640px); gap: 2rem; padding: 1.2rem 0 0; border-top: 1px solid var(--line); }
+.knowledge-graph figcaption p { margin: 0; color: var(--ink-soft); font-size: .78rem; line-height: 1.55; }
 .prose-shell { width: min(760px, 100%); margin: clamp(4rem, 9vw, 8rem) auto; font-size: 1.06rem; line-height: 1.82; color: #27302b; }
 .prose-shell h2 { margin: 4.4rem 0 1.25rem; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.06; letter-spacing: -.045em; color: var(--ink); font-weight: 540; }
 .prose-shell h3 { margin: 3rem 0 1rem; font-size: 1.35rem; color: var(--ink); }
@@ -158,5 +168,9 @@ img { max-width: 100%; height: auto; }
   .article-page { padding-inline: 1rem; }.article-header h1 { font-size: 3.35rem; }.article-meta { flex-wrap: wrap; }.article-hero-image { margin-inline: -1rem; border-left: 0; border-right: 0; }
   .prose-shell { font-size: 1rem; }.prose-shell table { display: block; overflow-x: auto; }
   .publication-update { grid-template-columns: 1fr; margin-bottom: -2rem; }
+  .knowledge-graph-heading, .knowledge-graph figcaption { grid-template-columns: 1fr; gap: .8rem; }
+  .knowledge-graph-heading strong { order: -1; }
+  .knowledge-graph-frame { margin-inline: -1rem; border-left: 0; border-right: 0; overflow-x: auto; }
+  .knowledge-graph-frame img { width: 920px; max-width: none; }
   .article-close { padding: 2rem; }
 }

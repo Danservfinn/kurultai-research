@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { KnowledgeGraphFigure } from "@/components/knowledge-graph-figure";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import type { PublicPost } from "@/lib/content";
 
@@ -26,6 +27,7 @@ export function ResearchPage({ post }: { post: PublicPost }) {
         </header>
         {post.heroImage && <figure className="article-hero-image"><img src={post.heroImage} width="1672" height="940" alt="Immutable rules separating proposal, authority, evidence, and recovery" /></figure>}
         {post.publicationNote && <aside className="publication-update"><b>Publication edition</b><p>{post.publicationNote}</p></aside>}
+        <KnowledgeGraphFigure post={post} />
         <article className="prose-shell">
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
             a: ({ href, children }) => <a href={href} rel="noreferrer">{children}</a>,

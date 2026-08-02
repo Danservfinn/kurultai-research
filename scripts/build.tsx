@@ -7,6 +7,7 @@ import Home from "@/app/page";
 import { Document } from "@/components/document";
 import { ResearchPage } from "@/components/research-page";
 import { getAllPosts } from "@/lib/content";
+import { renderKnowledgeGraphSvg } from "@/lib/knowledge-graph-svg";
 
 const ROOT = process.cwd();
 const require = createRequire(import.meta.url);
@@ -40,6 +41,7 @@ for (const [pkg, source, target] of [
 const posts = getAllPosts();
 write("index.html", html(<Document title="Kurultai Research" description="Source-backed research on agent systems, governed autonomy, and reliable intelligence." canonical={SITE}><Home /></Document>));
 for (const post of posts) {
+  write(`knowledge-graphs/${post.slug}.svg`, renderKnowledgeGraphSvg(post));
   write(`research/${post.slug}/index.html`, html(<Document title={`${post.title} — Kurultai Research`} description={post.excerpt} canonical={`${SITE}/research/${post.slug}/`} image={post.heroImage}><ResearchPage post={post} /></Document>));
 }
 const redirects = Object.fromEntries(posts.flatMap((post) => (post.aliases ?? []).map((alias) => [`/research/${alias}/`, `/research/${post.slug}/`])));
@@ -50,7 +52,7 @@ write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http:
 write("llms.txt", ["# Kurultai Research", "", "> Source-backed research on agent systems, governed autonomy, and reliable intelligence.", "", "## Publication boundary", "", "Standing operator policy authorizes canonical synthesized whitepapers only after source, review, privacy, exact-hash, build, and public-readback gates pass. This site contains frozen snapshots and has no access to the private Brain or runtime.", "", "## Research", "", ...posts.map((post) => `- [${post.title}](${SITE}/research/${post.slug}/): ${post.excerpt}`), ""].join("\n"));
 
 const files: Record<string, string> = {};
-for (const relative of ["index.html", "styles.css", "llms.txt", "sitemap.xml", "redirects.json", ...posts.map((post) => `research/${post.slug}/index.html`)]) {
+for (const relative of ["index.html", "styles.css", "llms.txt", "sitemap.xml", "redirects.json", ...posts.flatMap((post) => [`research/${post.slug}/index.html`, `knowledge-graphs/${post.slug}.svg`])]) {
   files[relative] = crypto.createHash("sha256").update(fs.readFileSync(path.join(DIST, relative))).digest("hex");
 }
 write("build-manifest.json", JSON.stringify({ schemaVersion: 1, builtAt: new Date().toISOString(), postCount: posts.length, files }, null, 2));

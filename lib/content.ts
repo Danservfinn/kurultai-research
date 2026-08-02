@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { buildKnowledgeGraph, type KnowledgeGraph } from "@/lib/knowledge-graph";
 
 export type Provenance = {
   synthesis: string;
@@ -28,9 +29,10 @@ export type PublicPost = {
   publicationNote?: string;
   canonicalSlug?: string;
   aliases?: string[];
+  knowledgeGraph: KnowledgeGraph;
 };
 
-type ManifestPost = Omit<PublicPost, "content"> & {
+type ManifestPost = Omit<PublicPost, "content" | "knowledgeGraph"> & {
   sourceFile: string;
   sourceSha256: string;
 };
@@ -48,7 +50,7 @@ const PRIVATE_PATTERNS: Array<[RegExp, string]> = [
   [/20\d{6}_\d{6}_[0-9a-f]{8}/, "private session reference"],
 ];
 
-export function validatePublicPost(post: PublicPost): { ok: boolean; errors: string[] } {
+export function validatePublicPost<T extends Pick<PublicPost, "public" | "status" | "content">>(post: T): { ok: boolean; errors: string[] } {
   const errors: string[] = [];
   if (!post.public) errors.push("post is not marked public");
   if (post.status !== "published") errors.push("post is not published");
@@ -73,7 +75,7 @@ function materialize(entry: ManifestPost): PublicPost {
   }
   const { sourceFile: _sourceFile, ...metadata } = entry;
   void _sourceFile;
-  const post: PublicPost = { ...metadata, content };
+  const post: PublicPost = { ...metadata, content, knowledgeGraph: buildKnowledgeGraph(content) };
   const validation = validatePublicPost(post);
   if (!validation.ok) {
     throw new Error(`Public content boundary failed for ${entry.slug}: ${validation.errors.join(", ")}`);
