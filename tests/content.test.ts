@@ -2,10 +2,24 @@ import { describe, expect, it } from "vitest";
 import { getAllPosts, getPostBySlug, validatePublicPost } from "@/lib/content";
 
 describe("public content boundary", () => {
-  it("exports only explicitly published public snapshots", () => {
+  it("exports the complete canonical whitepaper corpus in reverse chronology", () => {
     const posts = getAllPosts();
-    expect(posts.length).toBeGreaterThan(0);
+    expect(posts.map((post) => post.slug)).toEqual([
+      "hulagu-v2-compiling-autonomy-through-evidence-bound-gates",
+      "hermes-behind-the-service-boundary",
+      "typed-evidence-authority-separated-agent-architecture",
+      "self-improving-ai-needs-laws",
+    ]);
     expect(posts.every((post) => post.public && post.status === "published")).toBe(true);
+    expect(posts.map((post) => post.date)).toEqual([...posts.map((post) => post.date)].sort().reverse());
+  });
+
+  it("binds each public-redacted edition to both public and canonical source digests", () => {
+    const redacted = getAllPosts().filter((post) => post.publicEdition === "public-redacted-v1");
+    expect(redacted).toHaveLength(3);
+    expect(redacted.every((post) => /^[a-f0-9]{64}$/.test(post.sourceSha256 ?? ""))).toBe(true);
+    expect(redacted.every((post) => /^[a-f0-9]{64}$/.test(post.sourceArtifactSha256 ?? ""))).toBe(true);
+    expect(redacted.every((post) => post.publicationNote?.includes("Public redacted edition"))).toBe(true);
   });
 
   it("loads a post by stable slug with provenance", () => {
@@ -26,10 +40,10 @@ describe("public content boundary", () => {
       public: true,
       status: "published",
       featured: false,
-      content: `Read /${["Users", "example", "private"].join("/")} and [[private note]]`,
+      content: `Read /${["Users", "example", "private"].join("/")} and [[private note]] from session ${["20260725", "023435", "c2f08d00"].join("_")}`,
       provenance: { synthesis: "test", review: "none", provider: "unknown" },
     });
     expect(result.ok).toBe(false);
-    expect(result.errors).toEqual(expect.arrayContaining([expect.stringMatching(/private path/i), expect.stringMatching(/wikilink/i)]));
+    expect(result.errors).toEqual(expect.arrayContaining([expect.stringMatching(/private path/i), expect.stringMatching(/wikilink/i), expect.stringMatching(/session reference/i)]));
   });
 });

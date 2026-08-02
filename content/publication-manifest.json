@@ -1,6 +1,72 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "posts": [
+    {
+      "slug": "hulagu-v2-compiling-autonomy-through-evidence-bound-gates",
+      "sourceFile": "hulagu-v2-compiling-evidence-bound-admission.md",
+      "sourceSha256": "1f11158f38b6c404df7bf54f6b42a739af403e56e4f0548158fd13caf98947d7",
+      "sourceArtifactSha256": "9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5",
+      "publicEdition": "public-redacted-v1",
+      "title": "Hulagu v2: Compiling Evidence-Bound Admission Decisions",
+      "subtitle": "Admission can be compiled; capability still requires enforcement",
+      "excerpt": "A 26-source engineering case study of deterministic admission records, exact-source receipts, role-separated review, enforcement bypass, and the liveness cost of proof contracts.",
+      "date": "2026-07-27",
+      "topic": "Bounded autonomy",
+      "readingMinutes": 27,
+      "public": true,
+      "status": "published",
+      "featured": true,
+      "publicationNote": "Public redacted edition published under standing operator authorization. Local absolute paths were converted to repository-relative evidence references; technical claims, evidence grades, falsifiers, and revision history are unchanged.",
+      "provenance": {
+        "synthesis": "Kurultai whitepaper synthesized from 26 exact source and evidence artifacts",
+        "review": "Four adversarial publication-review rounds; all critical findings resolved in R2",
+        "provider": "Multi-model editorial and adversarial synthesis; no single-model authorship claim"
+      }
+    },
+    {
+      "slug": "hermes-behind-the-service-boundary",
+      "sourceFile": "hermes-behind-the-service-boundary.md",
+      "sourceSha256": "ff001e4090c0cafd6c1e33415d7ddcb24473e4e3962cae5ff79316c54e5ada53",
+      "sourceArtifactSha256": "215ac8e4795d8e1cd4abdbf2dbe6a56e2108ab0c1fef5e9aee077d90a38edbb2",
+      "publicEdition": "public-redacted-v1",
+      "title": "Hermes Behind the Service Boundary: Trustworthy Customer-Facing Agents",
+      "subtitle": "A proof-carrying envelope for consequential agent workflows",
+      "excerpt": "A reviewed architecture for putting Hermes behind tenant-scoped identity, authority, evidence, recovery, support, deletion, and end-to-end assurance boundaries.",
+      "date": "2026-07-25",
+      "topic": "Agent services",
+      "readingMinutes": 34,
+      "public": true,
+      "status": "published",
+      "featured": false,
+      "publicationNote": "Public redacted edition published under standing operator authorization. Local absolute paths and private session identifiers were removed or generalized; architecture states, evidence grades, product hypotheses, and limitations are unchanged.",
+      "provenance": {
+        "synthesis": "Kurultai whitepaper synthesized from 18 architecture, audit, review, and source artifacts",
+        "review": "Three adversarial revision rounds with publication blockers resolved",
+        "provider": "Multi-model editorial and adversarial synthesis; no single-model authorship claim"
+      }
+    },
+    {
+      "slug": "typed-evidence-authority-separated-agent-architecture",
+      "sourceFile": "typed-evidence-authority-separated-agent-architecture.md",
+      "sourceSha256": "f5151aa3ba45623351d68492e887c5104ce00d96d7e8676faf3e7dad77102f95",
+      "sourceArtifactSha256": "5d6e1e70dd50697399b43c8ea5fe89fb022753b3ea3f770a62d26dfe79e0e451",
+      "publicEdition": "public-redacted-v1",
+      "title": "Typed Evidence and Authority-Separated Agent Architecture",
+      "subtitle": "Structural defenses against silent, stochastic, and compositional failure",
+      "excerpt": "Why typed evidence, read-only planning, code-level authority separation, and adversarial revision form a practical defense against stochastic agent failures.",
+      "date": "2026-07-24",
+      "topic": "Agent architecture",
+      "readingMinutes": 8,
+      "public": true,
+      "status": "published",
+      "featured": false,
+      "publicationNote": "Public redacted edition published under standing operator authorization. Local absolute paths were converted to repository-relative evidence references; the final v3 argument, worked example, evidence grades, and falsifiers are unchanged.",
+      "provenance": {
+        "synthesis": "Cross-source synthesis spanning 15 manifest entries, 40+ studies, and four accepted synthesis packets",
+        "review": "Two critique rounds followed by a final v3 revision",
+        "provider": "Multi-model editorial and adversarial synthesis; no single-model authorship claim"
+      }
+    },
     {
       "slug": "self-improving-ai-needs-laws",
       "sourceFile": "self-improving-ai-needs-laws.md",
@@ -13,8 +79,9 @@
       "readingMinutes": 14,
       "public": true,
       "status": "published",
-      "featured": true,
+      "featured": false,
       "heroImage": "/yassa-immutable-laws.png",
+      "publicationNote": "Published by explicit operator authorization on August 2, 2026. Status language inside the article reflects its frozen July 24 pre-publication snapshot.",
       "provenance": {
         "synthesis": "Kurultai research synthesis from 20 public sources and internal engineering evidence",
         "review": "Independent exact-candidate review approved the frozen source snapshot",

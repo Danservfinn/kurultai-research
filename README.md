@@ -2,6 +2,8 @@
 
 Public research site for reviewed Kurultai knowledge artifacts, served at [blog.kurult.ai](https://blog.kurult.ai).
 
+The live corpus contains every canonical synthesized whitepaper listed in Brain's whitepaper index, plus the separately reviewed Yassa technical paper. Public editions preserve claims, evidence grades, limitations, falsifiers, and revision history while removing local filesystem coordinates and private session identifiers. The exact inventory and pre-publish decision are recorded in [`docs/PUBLICATION-INVENTORY-2026-08-02.md`](docs/PUBLICATION-INVENTORY-2026-08-02.md).
+
 ## Publication contract
 
 The site never reads from the private Brain at request time. A post reaches production only when:

@@ -6,6 +6,7 @@ import type { PublicPost } from "@/lib/content";
 export function ResearchPage({ post }: { post: PublicPost }) {
   const body = post.content
     .replace(/^---[\s\S]*?---\s*/, "")
+    .replace(/^<!--[\s\S]*?-->\s*/, "")
     .replace(/^# .*\n/, "")
     .replace(post.subtitle ? `*${post.subtitle}*` : "", "");
   return (
@@ -24,7 +25,7 @@ export function ResearchPage({ post }: { post: PublicPost }) {
           </div>
         </header>
         {post.heroImage && <figure className="article-hero-image"><img src={post.heroImage} width="1672" height="940" alt="Immutable rules separating proposal, authority, evidence, and recovery" /></figure>}
-        <aside className="publication-update"><b>Publication update</b><p>Published by explicit operator authorization on August 2, 2026. Status language inside the article reflects its frozen July 24 pre-publication snapshot.</p></aside>
+        {post.publicationNote && <aside className="publication-update"><b>Publication edition</b><p>{post.publicationNote}</p></aside>}
         <article className="prose-shell">
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
             a: ({ href, children }) => <a href={href} rel="noreferrer">{children}</a>,

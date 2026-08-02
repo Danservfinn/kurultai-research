@@ -1,9 +1,9 @@
 import type { PublicPost } from "@/lib/content";
 
-export function ResearchEntry({ post }: { post: PublicPost }) {
+export function ResearchEntry({ post, index }: { post: PublicPost; index: number }) {
   return (
     <article className="research-entry">
-      <div className="entry-index">01</div>
+      <div className="entry-index">{String(index + 1).padStart(2, "0")}</div>
       <div className="entry-copy">
         <div className="eyebrow-row"><span>{post.topic}</span><span>{post.readingMinutes} min read</span><span>Reviewed</span></div>
         <h3><a href={`/research/${post.slug}/`}>{post.title}</a></h3>

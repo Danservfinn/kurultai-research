@@ -23,9 +23,9 @@ export default function Home() {
         </section>
 
         <section className="research-shell" id="research">
-          <div className="section-heading"><span>01 / RESEARCH</span><h2>Current signals</h2><p>Distilled findings with explicit provenance, evidence boundaries, and operational limits.</p></div>
+          <div className="section-heading"><span>01 / RESEARCH · {posts.length} PAPERS</span><h2>Current signals</h2><p>Distilled findings with explicit provenance, evidence boundaries, and operational limits.</p></div>
           <div className="research-list">
-            {posts.length ? posts.map((post) => <ResearchEntry key={post.slug} post={post} />) : <div className="empty-state"><h3>No public research yet.</h3><p>Candidate work remains behind the review gate.</p></div>}
+            {posts.length ? posts.map((post, index) => <ResearchEntry key={post.slug} post={post} index={index} />) : <div className="empty-state"><h3>No public research yet.</h3><p>Candidate work remains behind the review gate.</p></div>}
           </div>
         </section>
 

@@ -11,4 +11,12 @@ describe("published research page", () => {
     expect(screen.getByText(/published by explicit operator authorization on august 2, 2026/i)).toBeInTheDocument();
     expect(screen.getAllByText("Why green tests do not prove a governed release")).toHaveLength(1);
   });
+
+  it("renders public-redacted editions without duplicating the source heading", () => {
+    const post = getPostBySlug("hulagu-v2-compiling-autonomy-through-evidence-bound-gates");
+    expect(post).toBeDefined();
+    render(<ResearchPage post={post!} />);
+    expect(screen.getAllByRole("heading", { name: post!.title })).toHaveLength(1);
+    expect(screen.getByText(/public redacted edition published under standing operator authorization/i)).toBeInTheDocument();
+  });
 });

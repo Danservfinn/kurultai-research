@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "canonicalCorpus": "Brain whitepapers/index.md",
+  "generatedAt": "2026-08-02",
+  "items": [
+    {
+      "sourceFile": "hulagu-v2-compiling-autonomy-through-evidence-bound-gates.md",
+      "publicFile": "hulagu-v2-compiling-evidence-bound-admission.md",
+      "sourceArtifactSha256": "9478433df8b7288c8337c31199fedc9c3ba18db22efcd657f7f0a605d85a81f5",
+      "sourceSha256": "1f11158f38b6c404df7bf54f6b42a739af403e56e4f0548158fd13caf98947d7",
+      "bytes": 46822,
+      "words": 5736,
+      "readingMinutes": 27,
+      "transform": "public-redacted-v1",
+      "privatePathsRemaining": 0,
+      "sessionIdsRemaining": 0,
+      "wikilinksRemaining": 0
+    },
+    {
+      "sourceFile": "hermes-behind-the-service-boundary.md",
+      "publicFile": "hermes-behind-the-service-boundary.md",
+      "sourceArtifactSha256": "215ac8e4795d8e1cd4abdbf2dbe6a56e2108ab0c1fef5e9aee077d90a38edbb2",
+      "sourceSha256": "ff001e4090c0cafd6c1e33415d7ddcb24473e4e3962cae5ff79316c54e5ada53",
+      "bytes": 62758,
+      "words": 7352,
+      "readingMinutes": 34,
+      "transform": "public-redacted-v1",
+      "privatePathsRemaining": 0,
+      "sessionIdsRemaining": 0,
+      "wikilinksRemaining": 0
+    },
+    {
+      "sourceFile": "typed-evidence-authority-separated-agent-architecture.md",
+      "publicFile": "typed-evidence-authority-separated-agent-architecture.md",
+      "sourceArtifactSha256": "5d6e1e70dd50697399b43c8ea5fe89fb022753b3ea3f770a62d26dfe79e0e451",
+      "sourceSha256": "f5151aa3ba45623351d68492e887c5104ce00d96d7e8676faf3e7dad77102f95",
+      "bytes": 14086,
+      "words": 1699,
+      "readingMinutes": 8,
+      "transform": "public-redacted-v1",
+      "privatePathsRemaining": 0,
+      "sessionIdsRemaining": 0,
+      "wikilinksRemaining": 0
+    }
+  ]
+}

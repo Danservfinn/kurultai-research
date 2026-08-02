@@ -23,6 +23,9 @@ export type PublicPost = {
   content: string;
   provenance: Provenance;
   sourceSha256?: string;
+  sourceArtifactSha256?: string;
+  publicEdition?: "public-redacted-v1";
+  publicationNote?: string;
 };
 
 type ManifestPost = Omit<PublicPost, "content"> & {
@@ -40,6 +43,7 @@ const PRIVATE_PATTERNS: Array<[RegExp, string]> = [
   [/\[\[[^\]]+\]\]/, "internal wikilink"],
   [/(?:api[_-]?key|secret|password|authorization)\s*[:=]\s*[^\s]+/i, "credential-shaped value"],
   [/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/, "private key"],
+  [/20\d{6}_\d{6}_[0-9a-f]{8}/, "private session reference"],
 ];
 
 export function validatePublicPost(post: PublicPost): { ok: boolean; errors: string[] } {

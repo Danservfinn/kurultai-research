@@ -7,6 +7,7 @@ describe("research index", () => {
     render(<Home />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/knowledge that survives review/i);
     expect(screen.getByText(/dreamer proposes\. humans authorize publication\./i)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /read the latest synthesis/i })).toHaveAttribute("href", "/research/self-improving-ai-needs-laws/");
+    expect(screen.getByRole("link", { name: /read the latest synthesis/i })).toHaveAttribute("href", "/research/hulagu-v2-compiling-autonomy-through-evidence-bound-gates/");
+    expect(screen.getByText(/4 papers/i)).toBeInTheDocument();
   });
 });
