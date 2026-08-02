@@ -19,7 +19,7 @@ export default function Home() {
             {featured && <a className="primary-link" href={`/research/${featured.slug}/`}>Read the latest synthesis <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>}
           </div>
           <SignalField />
-          <div className="hero-aside"><span>PUBLICATION PROTOCOL</span><p>Dreamer proposes. Humans authorize publication.</p></div>
+          <div className="hero-aside"><span>PUBLICATION PROTOCOL</span><p>Dreamer synthesizes. Standing policy governs release.</p></div>
         </section>
 
         <section className="research-shell" id="research">

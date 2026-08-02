@@ -11,10 +11,10 @@ The site never reads from the private Brain at request time. A post reaches prod
 1. an exact source snapshot is explicitly allowlisted in `content/publication-manifest.json`;
 2. its SHA-256 matches the frozen source digest;
 3. the public-content validator rejects private paths, internal wikilinks, credential-shaped values, and private keys;
-4. a human has authorized publication;
-5. tests, typecheck, lint, static build, and public readback pass.
+4. standing operator authorization covers canonical synthesized whitepapers, while semantic source/review/privacy gates still fail closed;
+5. tests, typecheck, lint, static build, push, and anonymous public readback pass.
 
-Dreamer is a discovery and proposal layer—not publication authority.
+Dreamer is a discovery and synthesis layer—not unilateral publication authority. A six-hour wake gate detects newly canonical `published` whitepapers; the agent-backed publisher processes at most one candidate per run, runs the full source/privacy/review gate, publishes and verifies only a passing exact/public-redacted snapshot, and records blocked candidates without bypassing the gate. An independent script-only corpus guard continues to alert on missing papers or hash drift.
 
 ## Development
 

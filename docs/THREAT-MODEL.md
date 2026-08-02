@@ -29,4 +29,4 @@
 
 ## Residual risk
 
-Automated pattern checks cannot prove that every sentence is appropriate for publication. Human exact-candidate review and explicit publication authorization remain required. Cloudflare and the Mac mini remain availability dependencies. A compromised local account could replace static files or the server; deployment receipts and source hashes make that detectable but do not prevent host compromise.
+Automated pattern checks cannot prove that every sentence is appropriate for publication. Standing operator authorization covers canonical synthesized whitepapers, but each candidate still requires semantic source checking, review convergence, privacy validation, exact digest binding, and public readback; any unresolved high-risk mismatch blocks automatic release. Cloudflare and the Mac mini remain availability dependencies. A compromised local account could replace static files or the server; deployment receipts and source hashes make that detectable but do not prevent host compromise.
