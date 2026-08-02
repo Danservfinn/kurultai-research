@@ -17,6 +17,7 @@ export function Document({ title, description, canonical, image = "/yassa-immuta
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="robots" content="index,follow" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'none'; connect-src 'self'; base-uri 'self'; form-action 'self'" />
         <link rel="canonical" href={canonical} />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="/styles.css" />
