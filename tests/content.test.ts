@@ -5,6 +5,7 @@ describe("public content boundary", () => {
   it("exports the complete canonical whitepaper corpus in reverse chronology", () => {
     const posts = getAllPosts();
     expect(posts.map((post) => post.slug)).toEqual([
+      "parsethis-buyer-pain-miner-from-x-security-research",
       "decision-reconstructible-agent-memory",
       "verification-solvency-agent-commit-rates",
       "hulegu-v2-compiling-autonomy-through-evidence-bound-gates",

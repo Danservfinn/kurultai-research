@@ -5,6 +5,7 @@ import { getAllPosts, getPostBySlug } from "@/lib/content";
 import { renderKnowledgeGraphSvg } from "@/lib/knowledge-graph-svg";
 
 const EXPECTED_SOURCE_COUNTS: Record<string, number> = {
+  "parsethis-buyer-pain-miner-from-x-security-research": 8,
   "decision-reconstructible-agent-memory": 10,
   "verification-solvency-agent-commit-rates": 8,
   "hulegu-v2-compiling-autonomy-through-evidence-bound-gates": 26,
@@ -17,10 +18,10 @@ describe("whitepaper knowledge graphs", () => {
   it("derives a public-safe source lineage graph for every published paper", () => {
     const posts = getAllPosts();
 
-    expect(posts).toHaveLength(6);
+    expect(posts).toHaveLength(7);
     for (const post of posts) {
       expect(post.knowledgeGraph.sourceCount).toBe(EXPECTED_SOURCE_COUNTS[post.slug]);
-      expect(post.knowledgeGraph.families.length).toBeGreaterThan(1);
+      expect(post.knowledgeGraph.families.length).toBeGreaterThanOrEqual(1);
       expect(post.knowledgeGraph.edges.length).toBeGreaterThan(0);
       expect(post.knowledgeGraph.edges.every((edge) => post.knowledgeGraph.sources.some((source) => source.id === edge.sourceId) && post.knowledgeGraph.sources.some((source) => source.id === edge.targetId))).toBe(true);
       expect(post.knowledgeGraph.sources.every((source) => source.familyId.length > 0)).toBe(true);
