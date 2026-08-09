@@ -4,6 +4,19 @@
   "generatedAt": "2026-08-02",
   "items": [
     {
+      "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-1012.md",
+      "publicFile": "parsethis-buyer-pain-miner-from-x-security-research-1012.md",
+      "sourceArtifactSha256": "3340b5239713785bba746fd6641689da2a46595ed63c2b38e3fb52d7c2422a76",
+      "sourceSha256": "3340b5239713785bba746fd6641689da2a46595ed63c2b38e3fb52d7c2422a76",
+      "bytes": 31155,
+      "words": 3828,
+      "readingMinutes": 17,
+      "transform": "exact-public-snapshot-v1",
+      "privatePathsRemaining": 0,
+      "sessionIdsRemaining": 0,
+      "wikilinksRemaining": 0
+    },
+    {
       "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-0209.md",
       "publicFile": "parsethis-buyer-pain-miner-from-x-security-research-0209.md",
       "sourceArtifactSha256": "f2471575dd4e9046a272c0b8d3cc3a00f06b7bedae80533bbb6b0c48fb322d5e",

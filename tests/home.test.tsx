@@ -7,8 +7,8 @@ describe("research index", () => {
     render(<Home />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/knowledge that survives review/i);
     expect(screen.getByText(/dreamer synthesizes\. standing policy governs release\./i)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /read the latest synthesis/i })).toHaveAttribute("href", "/research/parsethis-buyer-pain-miner-from-x-security-research-0209/");
+    expect(screen.getByRole("link", { name: /read the latest synthesis/i })).toHaveAttribute("href", "/research/parsethis-buyer-pain-miner-from-x-security-research-1012/");
     expect(screen.getByRole("link", { name: /open agent interface/i })).toHaveAttribute("href", "/agents/");
-    expect(screen.getByText(/8 papers/i)).toBeInTheDocument();
+    expect(screen.getByText(/9 papers/i)).toBeInTheDocument();
   });
 });
