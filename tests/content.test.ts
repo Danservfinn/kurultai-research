@@ -5,6 +5,7 @@ describe("public content boundary", () => {
   it("exports the complete canonical whitepaper corpus in reverse chronology", () => {
     const posts = getAllPosts();
     expect(posts.map((post) => post.slug)).toEqual([
+      "parsethis-buyer-pain-miner-from-x-security-research-2218",
       "parsethis-buyer-pain-miner-from-x-security-research-1414",
       "parsethis-buyer-pain-miner-from-x-security-research-1012",
       "parsethis-buyer-pain-miner-from-x-security-research-0209",
@@ -23,7 +24,7 @@ describe("public content boundary", () => {
 
   it("binds each public-redacted edition to both public and canonical source digests", () => {
     const redacted = getAllPosts().filter((post) => post.publicEdition?.startsWith("public-redacted-"));
-    expect(redacted).toHaveLength(4);
+    expect(redacted).toHaveLength(5);
     expect(redacted.some((post) => post.title.startsWith("Hulegu v2") && post.aliases?.includes("hulagu-v2-compiling-autonomy-through-evidence-bound-gates"))).toBe(true);
     expect(redacted.every((post) => /^[a-f0-9]{64}$/.test(post.sourceSha256 ?? ""))).toBe(true);
     expect(redacted.every((post) => /^[a-f0-9]{64}$/.test(post.sourceArtifactSha256 ?? ""))).toBe(true);

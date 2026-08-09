@@ -2,6 +2,28 @@
   "schemaVersion": 2,
   "posts": [
     {
+      "slug": "parsethis-buyer-pain-miner-from-x-security-research-2218",
+      "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-2218.md",
+      "sourceSha256": "5fde7ab6620a51649b7dae56460d0f2f7a890b6c9ae20be1c8101a83f543dce9",
+      "sourceArtifactSha256": "5fe62f8b7035b7c9ff872cdf15589d56fa686c0ff58618cd75fd6bd981ebd32d",
+      "publicEdition": "public-redacted-v1",
+      "title": "ParseThis buyer-pain miner from X/security research",
+      "subtitle": "A read-only signal architecture for converting social buyer-pain signals into GTM assets and evaluation fixtures",
+      "excerpt": "A read-only buyer-pain mining architecture that triangulates social media complaints with open-source artifacts to generate verified GTM copy, sales angles, and evaluation fixtures for AI security products.",
+      "date": "2026-08-09",
+      "topic": "AI security",
+      "readingMinutes": 12,
+      "public": true,
+      "status": "published",
+      "featured": true,
+      "publicationNote": "Public redacted edition published under standing operator authorization (2026-08-02) after a claim-level source check. All five Hugging Face model pages and the GitHub release confirmed live (HTTP 200). Internal proposal IDs, operator names, and internal path references were redacted from the canonical source. No claims were upgraded by redaction.",
+      "provenance": {
+        "synthesis": "Auto-synthesized whitepaper from continuous-mode Dreamer processing of OSINT signals",
+        "review": "Claim-level pre-publish source check; all five Hugging Face model references and the GitHub release confirmed live; internal operator names and proposal IDs redacted for public edition",
+        "provider": "Z.AI glm-5.2 continuous synthesis"
+      }
+    },
+    {
       "slug": "parsethis-buyer-pain-miner-from-x-security-research-1414",
       "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-1414.md",
       "sourceSha256": "78cc0dd16afab75803f59930db31adad50489dd9d85f953b1b8d5913bcfc8d78",
