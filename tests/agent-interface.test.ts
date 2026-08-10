@@ -95,7 +95,7 @@ describe("agent-first research interface", () => {
   });
 
   it("derives reproducible build timestamps from explicit or source metadata", () => {
-    expect(getStableBuildTimestamp(posts, {})).toBe("2026-08-09T00:00:00.000Z");
+    expect(getStableBuildTimestamp(posts, {})).toBe("2026-08-10T00:00:00.000Z");
     expect(getStableBuildTimestamp(posts, { SOURCE_DATE_EPOCH: "1785686400" })).toBe("2026-08-02T16:00:00.000Z");
   });
 });
