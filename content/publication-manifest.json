@@ -2,6 +2,28 @@
   "schemaVersion": 2,
   "posts": [
     {
+      "slug": "parsethis-buyer-pain-miner-from-x-security-research-1852",
+      "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-1852.md",
+      "sourceSha256": "23e9436b64320f19a5b6371bef34a23708298873cdca62454949b81c2f00a612",
+      "sourceArtifactSha256": "946569beae2d80ce2803a479f644a9215d936b3882b4b4aa0243f2f01af467d0",
+      "publicEdition": "public-corrected-v1",
+      "title": "Persistent Control, Role Confusion, and Leaky Reasoning: Synthesizing the 2026 Agentic LLM Security Threat Surface from Research and Buyer-Pain Signals",
+      "subtitle": "A read-only signal architecture for converting social buyer-pain signals into GTM assets and evaluation fixtures",
+      "excerpt": "A layered 2026 agentic-LLM threat surface: prompt injection as gateway to persistent harness control, role confusion, reasoning leakage, and adaptive jailbreaking. A read-only pipeline converts verified primary-source signals into GTM copy and tagged eval fixtures.",
+      "date": "2026-08-10",
+      "topic": "AI security",
+      "readingMinutes": 14,
+      "public": true,
+      "status": "published",
+      "featured": true,
+      "publicationNote": "Published under standing operator authorization (2026-08-02) after a claim-level source check. All cited arXiv papers and Hugging Face model cards confirmed live (HTTP 200). Reference 7 arXiv ID corrected from 2605.31042 (which is the Persistent Control paper) to 2603.12277 (the actual Role Confusion paper). Reference 10 relabeled from 'auxiliary source' to same-artifact-as-ref-7. Internal signal IDs (SIG-*) and proposal ID (RP-*) are labeled as internal provenance, not external sources. No redaction required; public edition is a corrected snapshot of the canonical source.",
+      "provenance": {
+        "synthesis": "Auto-synthesized whitepaper from continuous-mode Dreamer processing of OSINT signals",
+        "review": "Claim-level pre-publish source check; all arXiv papers and Hugging Face model references confirmed live; one arXiv ID misattribution corrected",
+        "provider": "Z.AI glm-5.2 continuous synthesis"
+      }
+    },
+    {
       "slug": "parsethis-buyer-pain-miner-from-x-security-research-1050",
       "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-1050.md",
       "sourceSha256": "23dde05a4f5d5d1b5f5b9f12e2bea55e6c41990de3efbae40f1d1de6fa42ed83",
