@@ -7,6 +7,7 @@ import { renderKnowledgeGraphSvg } from "@/lib/knowledge-graph-svg";
 const EXPECTED_SOURCE_COUNTS: Record<string, number> = {
   "parsethis-buyer-pain-miner-from-x-security-research-1852": 10,
   "parsethis-buyer-pain-miner-from-x-security-research-1050": 6,
+  "parsethis-buyer-pain-miner-from-x-security-research-2208": 8,
   "parsethis-buyer-pain-miner-from-x-security-research-0611": 12,
   "parsethis-buyer-pain-miner-from-x-security-research-1816": 3,
   "parsethis-buyer-pain-miner-from-x-security-research-2218": 8,
@@ -26,7 +27,7 @@ describe("whitepaper knowledge graphs", () => {
   it("derives a public-safe source lineage graph for every published paper", () => {
     const posts = getAllPosts();
 
-    expect(posts).toHaveLength(15);
+    expect(posts).toHaveLength(16);
     for (const post of posts) {
       expect(post.knowledgeGraph.sourceCount).toBe(EXPECTED_SOURCE_COUNTS[post.slug]);
       expect(post.knowledgeGraph.families.length).toBeGreaterThanOrEqual(1);
