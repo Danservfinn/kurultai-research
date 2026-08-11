@@ -13,6 +13,7 @@ describe("public content boundary", () => {
       "parsethis-buyer-pain-miner-from-x-security-research-1414",
       "parsethis-buyer-pain-miner-from-x-security-research-1012",
       "parsethis-buyer-pain-miner-from-x-security-research-0209",
+      "parsethis-buyer-pain-miner-from-x-security-research-1806",
       "parsethis-buyer-pain-miner-from-x-security-research-2208",
       "parsethis-buyer-pain-miner-from-x-security-research",
       "decision-reconstructible-agent-memory",

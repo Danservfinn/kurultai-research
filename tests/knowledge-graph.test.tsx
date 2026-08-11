@@ -14,6 +14,7 @@ const EXPECTED_SOURCE_COUNTS: Record<string, number> = {
   "parsethis-buyer-pain-miner-from-x-security-research-1414": 7,
   "parsethis-buyer-pain-miner-from-x-security-research-1012": 15,
   "parsethis-buyer-pain-miner-from-x-security-research-0209": 6,
+  "parsethis-buyer-pain-miner-from-x-security-research-1806": 7,
   "parsethis-buyer-pain-miner-from-x-security-research": 8,
   "decision-reconstructible-agent-memory": 10,
   "verification-solvency-agent-commit-rates": 8,
@@ -27,7 +28,7 @@ describe("whitepaper knowledge graphs", () => {
   it("derives a public-safe source lineage graph for every published paper", () => {
     const posts = getAllPosts();
 
-    expect(posts).toHaveLength(16);
+    expect(posts).toHaveLength(17);
     for (const post of posts) {
       expect(post.knowledgeGraph.sourceCount).toBe(EXPECTED_SOURCE_COUNTS[post.slug]);
       expect(post.knowledgeGraph.families.length).toBeGreaterThanOrEqual(1);
