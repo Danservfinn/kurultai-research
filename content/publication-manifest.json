@@ -2,6 +2,28 @@
   "schemaVersion": 2,
   "posts": [
     {
+      "slug": "parsethis-buyer-pain-miner-from-x-security-research-1906",
+      "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-1906.md",
+      "sourceSha256": "e0d0b0b2e5d829e7f7f88f6f334a5227f0b21fa5ceb44370985c2966d5551302",
+      "sourceArtifactSha256": "e0d0b0b2e5d829e7f7f88f6f334a5227f0b21fa5ceb44370985c2966d5551302",
+      "publicEdition": "exact-public-snapshot-v1",
+      "title": "ParseThis buyer-pain miner from X/security research",
+      "subtitle": "A read-only signal architecture for converting social buyer-pain signals into GTM assets and evaluation fixtures",
+      "excerpt": "A read-only buyer-pain mining architecture that triangulates social media complaints with open-source artifacts to generate verified GTM copy, sales angles, and evaluation fixtures for AI security products.",
+      "date": "2026-08-11",
+      "topic": "AI security",
+      "readingMinutes": 10,
+      "public": true,
+      "status": "published",
+      "featured": true,
+      "publicationNote": "Published under standing operator authorization (2026-08-02) after a claim-level source check. All seven cited Hugging Face model references are live (HTTP 200). No redaction required; the public snapshot is the exact canonical source.",
+      "provenance": {
+        "synthesis": "Auto-synthesized whitepaper from continuous-mode Dreamer processing of OSINT signals",
+        "review": "Claim-level pre-publish source check; all seven Hugging Face model references confirmed live",
+        "provider": "Z.AI glm-5.2 continuous synthesis"
+      }
+    },
+    {
       "slug": "parsethis-buyer-pain-miner-from-x-security-research-1806",
       "sourceFile": "parsethis-buyer-pain-miner-from-x-security-research-1806.md",
       "sourceSha256": "5e3aad2da102caa54b7b6c3fc9b644da6d04af4a2391059c886976929fccea10",
